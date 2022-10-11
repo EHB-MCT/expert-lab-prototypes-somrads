@@ -1,23 +1,43 @@
-import '../style/Nav.scss';
+import "../style/hero.scss";
 import "../style/style.scss";
+import logo from "../assets/img/logo.png";
 
 function Hero() {
   return (
     <div className="Hero">
-      <navbar>
-      <div className='nav-list'>
-        <img src="#" alt="background"/>
-        <h3>Lapaz</h3>
-        <ul>
-          <li className='nav-item'><a href="#">Home</a></li>
-          <li className='nav-item'><a href="#">Over Ons</a></li>
-          <li className='nav-item'><a href="#">Contact</a></li>
-          <li className='nav-item'><a href="#">Reserveren</a></li>
+      <div className="nav">
+        <ul className="nav-list">
+          <li className="nav-item">
+            <a href="#">
+              <img src={logo} alt="lapaz-logo" width="120" height="40" />
+            </a>
+          </li>
+
+          <li className="nav-item">
+            <a href="#">Home</a>
+          </li>
+
+          <li className="nav-item">
+            <a href="#">Over Ons</a>
+          </li>
+
+          <li className="nav-item">
+            <a href="#">Contact</a>
+          </li>
+
+          <li className="nav-item">
+            <a href="#">Reserveren</a>
+          </li>
         </ul>
-        <h2>Lapaz</h2>
-        <p>Since 2004</p>
+        <div className="banner-area">
+          <div className="content-area">
+            <div className="content">
+            <img src={logo} alt="lapaz-logo" />
+              <p>Since 2004</p>
+            </div>
+          </div>
+        </div>
       </div>
-      </navbar>
     </div>
   );
 }
