@@ -1,19 +1,23 @@
 import './App.scss';
-import Hero from "../src/components/Hero"
-// import OverOns from "../src/components/OverOns"
-// import Contact from "../src/components/Contact"
-// import Reserveren from './components/Reserveren';
-// import Footer from './components/Footer';
+import Hero from "../src/components/Hero";
+import OverOns from "../src/components/OverOns";
+import Bieren from './components/Bieren';
+import Terras from './components/Terras';
+import Contact from "../src/components/Contact"
+import Reserveren from './components/Reserveren';
+import Footer from './components/Footer';
 
 
 function App() {
   return (
     <div className="App">
     <Hero/>
-    {/* <OverOns/>
+    <OverOns/>
+    <Bieren/>
+    <Terras/>
     <Contact/>
     <Reserveren/>
-    <Footer/> */}
+    <Footer/>
     </div>
   );
 }

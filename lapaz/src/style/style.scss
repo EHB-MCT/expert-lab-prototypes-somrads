@@ -1,0 +1,81 @@
+$titleColor: #f2ac66;
+$titleFont: "Futura Pt";
+$titleFontSize: 3.75rem;
+$highlightColor: #f69a7e;
+$descriptionColor: #362112;
+$fontWeight: 540;
+
+body {
+  background-color: #fef7f0;
+}
+
+.PageTitleCenter {
+  text-align: center;
+  font-family: $titleFont;
+  font-weight: bold;
+  font-size: $titleFontSize;
+  color: $titleColor;
+}
+
+.PageTitleRight{
+  text-align: right;
+  font-family: $titleFont;
+  font-weight: bold;
+  font-size: $titleFontSize;
+  color: $titleColor;
+}
+
+.PageTitleLeft{
+  text-align: left;
+  font-family: $titleFont;
+  font-weight: bold;
+  font-size: $titleFontSize;
+  color: $titleColor;
+}
+
+.OverOns {
+  display: block;
+  margin: 5%;
+}
+
+.content-description {
+  margin-top: 3%;
+  line-height: 60px;
+  font-size: 1.3em;
+  text-align: center;
+  color: $descriptionColor;
+  font-family: $titleFont;
+  font-weight: $fontWeight;
+}
+
+.Bieren{
+  width: fit-content;
+  background-color: #FDE9D6;
+  .content-description{
+    text-align: right;
+  }
+}
+
+.highlight {
+  color: $highlightColor;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+
+  .button {
+    font-family: $titleFont;
+    font-weight: $fontWeight;
+    background-color: $titleColor;
+    border: none;
+    color: $descriptionColor;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 4px 2px;
+    padding: 12px 50px;
+    cursor: pointer;
+  }
+}

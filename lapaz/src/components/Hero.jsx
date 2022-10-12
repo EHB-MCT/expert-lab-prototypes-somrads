@@ -8,7 +8,7 @@ function Hero() {
       <div className="nav">
         <ul className="nav-list">
           <li className="nav-item">
-            <a href="#">
+            <a href= "#">
               <img src={logo} alt="lapaz-logo" width="120" height="40" />
             </a>
           </li>
@@ -33,7 +33,7 @@ function Hero() {
           <div className="content-area">
             <div className="content">
             <img src={logo} alt="lapaz-logo" />
-              <p>Since 2004</p>
+              <p>Since 2002</p>
             </div>
           </div>
         </div>
