@@ -4,7 +4,7 @@ import OverOns from "../src/components/OverOns";
 import Bieren from './components/Bieren';
 import Terras from './components/Terras';
 import Contact from "../src/components/Contact"
-import Map from "../src/components/Map";
+import LapazMap from "./components/LapazMap";
 import Reserveren from './components/Reserveren';
 import Footer from './components/Footer';
 
@@ -17,10 +17,10 @@ function App() {
     <Bieren/>
     <Terras/>
     <Contact/>
-    <Map/>
+    <LapazMap/>
     <Reserveren/>
     <Footer/>
-    
+
     </div>
 
     
