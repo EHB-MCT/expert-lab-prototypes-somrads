@@ -17,7 +17,7 @@ body {
   color: $titleColor;
 }
 
-.PageTitleRight{
+.PageTitleRight {
   text-align: right;
   font-family: $titleFont;
   font-weight: bold;
@@ -25,7 +25,7 @@ body {
   color: $titleColor;
 }
 
-.PageTitleLeft{
+.PageTitleLeft {
   text-align: left;
   font-family: $titleFont;
   font-weight: bold;
@@ -35,7 +35,7 @@ body {
 
 .OverOns {
   display: block;
-  margin: 5%;
+  margin: 10%;
 }
 
 .content-description {
@@ -48,12 +48,29 @@ body {
   font-weight: $fontWeight;
 }
 
-.Bieren{
-  width: fit-content;
-  background-color: #FDE9D6;
-  .content-description{
+.Bieren {
+  margin: 10% 0% 0% 0%;
+}
+
+.background-color {
+  margin-left: 30%;
+  background-color: #fde9d6;
+  .content-description {
     text-align: right;
   }
+}
+
+.image {
+  margin-top: 5%;
+  position: absolute;
+  margin-left: 5rem;
+  width: 45%;
+  z-index: 1;
+}
+
+.container-card {
+  margin-right: 5rem;
+  padding: 10% 0% 10% 0%;
 }
 
 .highlight {
@@ -77,5 +94,49 @@ body {
     margin: 4px 2px;
     padding: 12px 50px;
     cursor: pointer;
+  }
+}
+
+.Terras {
+  margin: 5% 0% 25% 0%;
+  .terras-container {
+    display: flex;
+    margin-left: 5rem;
+    .image {
+      margin-top: 10%;
+      margin-left: 60%;
+      width: 30%;
+      z-index: 0;
+    }
+    .container-card {
+      width: 50%;
+      .content-description {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.Contact {
+  width: 100%;
+  border: solid black;
+  display: flex;
+  justify-content: center;
+  .background-color{
+    width: 90%;
+    margin-left: 0%;
+  }
+  .content-description {
+    margin: 3%;
+    display: flex;
+    justify-content: center;
+    
+    ul {
+      list-style: none;
+    }
+    img {
+      width: 10%;
+    }
+    
   }
 }

@@ -1,20 +1,31 @@
 import "../style/style.scss";
+import facebook from "../assets/img/facebook.png";
 
 function Contact() {
   return (
     <div className="Contact">
-      <h1 className="PageTitle">Contact</h1>
-      <div className="descriptie">
-        <div className="adres">
-          <p>Tiensestraat 73 3000 Leuven</p>
-        </div>
-        <div className="nummer">
-          <p>016 20 01 01</p>
-        </div>
-        <div className="socials">
-          <p> Volg ons op Facebook!</p>
-          <img src="#" alt="facebook-logo" />
-          <p>(google maps)</p>
+      <div className="background-color">
+        <h1 className="PageTitleCenter">Contact</h1>
+        <div className="content-description">
+          <div className="adres">
+            <p>
+              {" "}
+              <span className="highlight"> 7/7 open</span> vanaf 11 uur
+            </p>
+          </div>
+          <div className="nummer">
+            <p>
+              Tiensestraat 73 <br /> 3000 Leuven
+            </p>
+          </div>
+          <div className="socials">
+            <ul>
+              <li>016 20 01 01</li>
+              <li>
+                <img src={facebook} alt="facebook-logo" />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
