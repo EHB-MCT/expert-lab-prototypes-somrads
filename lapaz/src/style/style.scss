@@ -129,13 +129,20 @@ body {
   .content-description {
     margin: 3%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    .socials{
+      width: 13%;
+    }
+    .adress{
+      text-align: left;
+      line-height: 0px;
+    }
     
     ul {
       list-style: none;
     }
     img {
-      width: 10%;
+      width:25%;
     }
     
   }

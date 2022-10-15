@@ -8,6 +8,7 @@ function Bieren() {
       <div className="background-color">
         <div className="container-card">
           <h1 className="PageTitleRight">Bieren Van't Vat</h1>
+          <div className="contact-container">
           <div className="content-description">
             <p>
               Een van de kenmerken van café LaPaz zijn de bieren van’t vat zijn.
@@ -24,6 +25,7 @@ function Bieren() {
               <br />
               zeker en vast eentje vinden die bij jouw smaak zal passen!
             </p>
+          </div>
           </div>
         </div>
       </div>
