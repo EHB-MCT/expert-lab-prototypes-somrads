@@ -1,6 +1,5 @@
 import "../style/style.scss";
 import facebook from "../assets/img/facebook.png";
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
 
 function Contact() {
   return (
@@ -32,7 +31,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className="map"></div>
     </div>
   );
 }
