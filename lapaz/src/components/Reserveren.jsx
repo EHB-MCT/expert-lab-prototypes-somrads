@@ -17,7 +17,6 @@ function Reserveren() {
           </label>
 
           <label>
-            Email
             <input type="email" name="email" placeholder="Jouw email adres" />
           </label>
 
@@ -35,6 +34,17 @@ function Reserveren() {
           Wil je onze <span className="highlight">zaaltje huren</span>? Vul dan
           zeker onze formulier in voor een <br /> reservatie. Wij zullen u dan
           verder contacteren over de nodige details!
+        </div>
+      </div>
+      <div className="gallerij">
+        <div className="gallerij-container">
+        <h1 className="PageTitleRight">Gallerij</h1>
+        <img src="#" alt="#" />
+        <img src="#" alt="#" />
+        <img src="#" alt="#" />
+        <img src="#" alt="#" />
+        <img src="#" alt="#" />
+        <img src="#" alt="#" />
         </div>
       </div>
     </div>

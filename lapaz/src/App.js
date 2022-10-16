@@ -16,8 +16,10 @@ function App() {
     <OverOns/>
     <Bieren/>
     <Terras/>
+
     <Contact/>
     <LapazMap/>
+
     <Reserveren/>
     <Footer/>
 

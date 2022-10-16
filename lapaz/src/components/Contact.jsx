@@ -24,13 +24,14 @@ function Contact() {
           <div className="socials">
             <ul>
               <li>016 20 01 01</li>
-              <li>
+              <li className="fb-logo">
                 <img src={facebook} alt="facebook-logo" />
               </li>
             </ul>
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
