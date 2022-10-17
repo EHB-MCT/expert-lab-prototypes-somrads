@@ -172,7 +172,8 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 5% 0% 25% 0%;
-  .reserveren-container,.gallerij {
+  .reserveren-container,
+  .gallerij {
     margin-right: 5rem;
     padding: 5% 0% 5% 0%;
 
@@ -180,9 +181,28 @@ body {
       text-align: right;
     }
   }
-  .reserveren-wrap{
+  .reserveren-wrap {
     display: flex;
     flex-direction: column;
+  }
+
+  .image-grid {
+    $gap: 16px;
+    $num-cols: 2;
+    $row-height: 175px;
+
+    box-sizing: border-box;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat($num-cols, 1fr);
+    grid-auto-rows: $row-height;
+    gap: $gap;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .form {
