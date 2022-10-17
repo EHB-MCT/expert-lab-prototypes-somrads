@@ -1,6 +1,7 @@
 import "../style/style.scss";
 import "../style/form.scss";
 
+
 function Reserveren() {
   return (
     <div className="Reserveren">
@@ -17,6 +18,7 @@ function Reserveren() {
           </label>
 
           <label>
+            E-mail
             <input type="email" name="email" placeholder="Jouw email adres" />
           </label>
 
@@ -28,23 +30,25 @@ function Reserveren() {
           <button className="button">Verstuur</button>
         </form>
       </div>
-      <div className="reserveren-container">
-        <h1 className="PageTitleRight">Resereveren</h1>
-        <div className="content-description">
-          Wil je onze <span className="highlight">zaaltje huren</span>? Vul dan
-          zeker onze formulier in voor een <br /> reservatie. Wij zullen u dan
-          verder contacteren over de nodige details!
+      <div className="reserveren-wrap">
+        <div className="reserveren-container">
+          <h1 className="PageTitleRight">Resereveren</h1>
+          <div className="content-description">
+            Wil je onze <span className="highlight">zaaltje huren</span>? Vul
+            dan zeker onze formulier in voor een <br /> reservatie. Wij zullen u
+            dan verder contacteren over de nodige details!
+          </div>
         </div>
-      </div>
-      <div className="gallerij">
-        <div className="gallerij-container">
-        <h1 className="PageTitleRight">Gallerij</h1>
-        <img src="#" alt="#" />
-        <img src="#" alt="#" />
-        <img src="#" alt="#" />
-        <img src="#" alt="#" />
-        <img src="#" alt="#" />
-        <img src="#" alt="#" />
+        <div className="gallerij">
+          <div className="gallerij-container">
+            <h1 className="PageTitleRight">Gallerij</h1>
+            <img src="#" alt="#" />
+            <img src="#" alt="#" />
+            <img src="#" alt="#" />
+            <img src="#" alt="#" />
+            <img src="#" alt="#" />
+            <img src="#" alt="#" />
+          </div>
         </div>
       </div>
     </div>
