@@ -32,7 +32,7 @@ function Reserveren() {
       </div>
       <div className="reserveren-wrap">
         <div className="reserveren-container">
-          <h1 className="PageTitleRight">Resereveren</h1>
+          <h1 className="PageTitleRight">Reserveren</h1>
           <div className="content-description">
             Wil je onze <span className="highlight">zaaltje huren</span>? Vul
             dan zeker onze formulier in voor een <br /> reservatie. Wij zullen u
