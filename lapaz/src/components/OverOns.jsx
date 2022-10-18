@@ -1,4 +1,5 @@
 import "../style/style.scss";
+import { motion, Variants } from "framer-motion";
 
 function OverOns() {
   return (

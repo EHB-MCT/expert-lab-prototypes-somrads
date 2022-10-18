@@ -3,9 +3,28 @@ import bier from "../assets/img/bier.jpg";
 import { motion, Variants } from "framer-motion";
 
 function Bieren() {
+  const imageAnimate = {
+    offscreen: { x: 100, opacity:0 },
+    onscreen: { x: 0, transition: { ease: "easeOut", duration: 2 }, opacity:1 },
+  };
+
+  const textAnimate = {
+    offscreen: { y: -100, opacity: 0 },
+    onscreen: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", bounce: 0.4, duration: 3 },
+    },
+  };
   return (
-    <div className="Bieren">
-      <motion.div initial={{ x: 0 }} animate={{ x: 100, rotate:360 }}>
+    <motion.div
+      transition={{ staggerChildren: 0.5 }}
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{once:true, amount:0.3}}
+      className="Bieren"
+    >
+      <motion.div variants={imageAnimate}>
         <img
           className="image"
           src={bier}
@@ -15,10 +34,12 @@ function Bieren() {
       </motion.div>
       <div className="background-color">
         <div className="container-card">
-          <h1 className="PageTitleRight">Bieren Van't Vat</h1>
+          <motion.h1 variants={textAnimate} className="PageTitleRight">
+            Bieren Van't Vat
+          </motion.h1>
           <div className="contact-container">
             <div className="content-description">
-              <p>
+              <motion.p variants={textAnimate}>
                 Een van de kenmerken van café LaPaz zijn de bieren van’t vat
                 zijn.
                 <br />
@@ -33,12 +54,12 @@ function Bieren() {
                 je
                 <br />
                 zeker en vast eentje vinden die bij jouw smaak zal passen!
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
