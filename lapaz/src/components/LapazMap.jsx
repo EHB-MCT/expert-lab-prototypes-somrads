@@ -11,7 +11,6 @@ function LapazMap() {
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-
       </div>
     </div>
   );

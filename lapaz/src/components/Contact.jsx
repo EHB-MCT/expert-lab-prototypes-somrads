@@ -3,7 +3,7 @@ import facebook from "../assets/img/facebook.png";
 
 function Contact() {
   return (
-    <div className="Contact">
+    <div className="Contact" id="Contact">
       <div className="background-color">
         <h1 className="PageTitleCenter">Contact</h1>
         <div className="content-description">

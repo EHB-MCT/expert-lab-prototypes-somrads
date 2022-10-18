@@ -4,7 +4,7 @@ import bier from "../assets/img/bier.jpg";
 function Bieren() {
   return (
     <div className="Bieren">
-      <img className="image" src={bier} alt="bieren van het vat" />
+      <img className="image" src={bier} alt="bieren van het vat" loading="lazy" />
       <div className="background-color">
         <div className="container-card">
           <h1 className="PageTitleRight">Bieren Van't Vat</h1>

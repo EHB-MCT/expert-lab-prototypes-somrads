@@ -2,7 +2,7 @@ import "../style/style.scss";
 
 function OverOns() {
   return (
-    <div className="OverOns">
+    <div className="OverOns" id="OverOns">
       <div className="container">
         <h1 className="PageTitleCenter">Over Ons</h1>
         <div className="content-description">

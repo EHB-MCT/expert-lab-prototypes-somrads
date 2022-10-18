@@ -5,7 +5,7 @@ function Terras() {
   return (
     <div className="Terras">
       <div className="terras-container">
-        <img  className = "image" src={terras} alt="terras" />
+        <img  className = "image" src={terras} alt="terras" loading="lazy" />
         <div className="container-card">
           <h1 className="PageTitleLeft">Terras</h1>
           <div className="content-description">

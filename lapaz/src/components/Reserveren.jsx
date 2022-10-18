@@ -4,7 +4,7 @@ import GALLERY from "../assets/img/gallerij";
 
 function Reserveren() {
   return (
-    <div className="Reserveren">
+    <div className="Reserveren" id="Reserveren">
       <div className="form">
         <form>
           <label>
@@ -43,10 +43,10 @@ function Reserveren() {
           <div className="gallerij-container">
             <h1 className="PageTitleLeft">Gallerij</h1>
             <div className="image-grid">
-              <img src={GALLERY.toog} alt="toog" />
-              <img src={GALLERY.mensen} alt="mensen" />
-              <img src={GALLERY.mensen2} alt="mensen2" />
-              <img src={GALLERY.flessen} alt="flessen" />
+              <img src={GALLERY.toog} alt="toog" loading="lazy" />
+              <img src={GALLERY.mensen} alt="mensen" loading="lazy" />
+              <img src={GALLERY.mensen2} alt="mensen2" loading="lazy" />
+              <img src={GALLERY.flessen} alt="flessen" loading="lazy" />
             </div>
           </div>
         </div>

@@ -257,6 +257,14 @@ body {
   .footer-title {
     font-weight: bold;
     color: $titleColor;
+    a {
+      font-weight: bold;
+      color: $titleColor;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $highlightColor;
   }
   .container-footer {
     display: flex;
