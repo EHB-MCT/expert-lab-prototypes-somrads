@@ -1,26 +1,65 @@
 import "../style/style.scss";
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, useScroll, useTransform } from "framer-motion";
 
 function OverOns() {
+  const titleAnimate = {
+    offscreen: { y: -100, opacity: 0 },
+    onscreen: { y: 0, opacity: 1, type: "spring", bounce: 0.6, duration: 1 },
+  };
+  const textAnimate = {
+    offscreen: { y: -100, opacity: 0 },
+    onscreen: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", bounce: 0.4, duration: 3 },
+    },
+  };
+  const button = {
+    whileHover: { scale: 1.2, rotate: 90 },
+    whileTap: {
+      scale: 0.8,
+      rotate: -90,
+      borderRadius: "100%",
+    },
+  };
+
   return (
-    <div className="OverOns" id="OverOns">
-      <div className="container">
-        <h1 className="PageTitleCenter">Over Ons</h1>
+    <motion.div className="OverOns" id="OverOns">
+      <motion.div
+        transition={{ staggerChildren: 0.5 }}
+        initial={"offscreen"}
+        whileInView={"onscreen"}
+        viewport={{ once: true, amount: 0.3 }}
+        className="container"
+      >
+        <motion.h1 variants={titleAnimate} className="PageTitleCenter">
+          Over Ons
+        </motion.h1>
         <div className="content-description">
-          <p>
+          <motion.p variants={textAnimate}>
             <span className="highlight"> Café LaPaz </span> is sinds
             <span className="highlight"> 2002 </span> de thuis van vele
             studenten en Leuvenaars. <br />
             Gelegen in het hartje van Leuven waar je kan genieten op ons terras
             met een brede <br /> selectie van bieren, drankjes, cocktails en
             knabbeltjes. Bekijk zeker onze menu voor <br /> meer informatie.
-          </p>
+          </motion.p>
         </div>
-        <div className="button-container">
-          <button className="button"> Menu </button>
-        </div>
-      </div>
-    </div>
+        <motion.div variants={textAnimate} className="button-container">
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            transition = {{type: "spring", bounce: .4, duration: 1}}
+            whileTap={{
+              scale: 1.3,
+            }}
+            className="button"
+          >
+            {" "}
+            Menu{" "}
+          </motion.button>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }
 
