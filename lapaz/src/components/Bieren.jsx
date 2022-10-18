@@ -4,7 +4,7 @@ import { motion, Variants } from "framer-motion";
 
 function Bieren() {
   const imageAnimate = {
-    offscreen: { x: 100, opacity:0 },
+    offscreen: { x: -100, opacity:0 },
     onscreen: { x: 0, transition: { ease: "easeOut", duration: 2 }, opacity:1 },
   };
 
@@ -18,10 +18,10 @@ function Bieren() {
   };
   return (
     <motion.div
-      transition={{ staggerChildren: 0.5 }}
+      transition={{ staggerChildren: 0.2 }}
       initial={"offscreen"}
       whileInView={"onscreen"}
-      viewport={{once:true, amount:0.3}}
+      viewport={{once:true, amount:0.5}}
       className="Bieren"
     >
       <motion.div variants={imageAnimate}>

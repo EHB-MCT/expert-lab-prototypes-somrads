@@ -16,25 +16,75 @@ function Hero() {
             <li className="nav-item">
               <HashLink to="#Home">
                 {" "}
-                <img src={logo} alt="lapaz-logo" width="120" height="40" />
+                <motion.img
+                  whileHover={{ scale: 1.2 }}
+                  src={logo}
+                  alt="lapaz-logo"
+                  width="120"
+                  height="40"
+                />
               </HashLink>
             </li>
 
-            <li className="nav-item">
+            <motion.li
+              className="nav-item"
+              whileHover={{
+                scale: 1.02,
+                y: -5,
+                transition: "ease",
+                duration: 2,
+              }}
+              whileTap={{
+                scale: 1.2,
+              }}
+            >
               <HashLink to="#Home">Home</HashLink>
-            </li>
+            </motion.li>
 
-            <li className="nav-item">
+            <motion.li
+              className="nav-item"
+              whileHover={{
+                scale: 1.02,
+                y: -5,
+                transition: "ease",
+                duration: 2,
+              }}
+              whileTap={{
+                scale: 1.2,
+              }}
+            >
               <HashLink to="#OverOns">Over Ons</HashLink>
-            </li>
+            </motion.li>
 
-            <li className="nav-item">
+            <motion.li
+              className="nav-item"
+              whileHover={{
+                scale: 1.02,
+                y: -5,
+                transition: "ease",
+                duration: 2,
+              }}
+              whileTap={{
+                scale: 1.2,
+              }}
+            >
               <HashLink to="#Contact">Contact</HashLink>
-            </li>
+            </motion.li>
 
-            <li className="nav-item">
+            <motion.li
+              whileHover={{
+                scale: 1.02,
+                y: -5,
+                transition: "ease",
+                duration: 2,
+              }}
+              whileTap={{
+                scale: 1.2,
+              }}
+              className="nav-item"
+            >
               <HashLink to="#Reserveren">Reserveren</HashLink>
-            </li>
+            </motion.li>
           </ul>
         </div>
       </Router>

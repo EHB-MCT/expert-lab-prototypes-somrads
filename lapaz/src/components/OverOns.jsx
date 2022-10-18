@@ -14,14 +14,6 @@ function OverOns() {
       transition: { type: "spring", bounce: 0.4, duration: 3 },
     },
   };
-  const button = {
-    whileHover: { scale: 1.2, rotate: 90 },
-    whileTap: {
-      scale: 0.8,
-      rotate: -90,
-      borderRadius: "100%",
-    },
-  };
 
   return (
     <motion.div className="OverOns" id="OverOns">
@@ -29,7 +21,7 @@ function OverOns() {
         transition={{ staggerChildren: 0.5 }}
         initial={"offscreen"}
         whileInView={"onscreen"}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.5 }}
         className="container"
       >
         <motion.h1 variants={titleAnimate} className="PageTitleCenter">
