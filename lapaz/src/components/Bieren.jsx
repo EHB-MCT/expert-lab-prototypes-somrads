@@ -5,7 +5,7 @@ import { motion, Variants } from "framer-motion";
 function Bieren() {
   const imageAnimate = {
     offscreen: { x: -100, opacity:0 },
-    onscreen: { x: 0, transition: { ease: "easeOut", duration: 2 }, opacity:1 },
+    onscreen: { x: 0, transition: { type: "spring", stiffness: 100, damping: 3}, opacity:1 },
   };
 
   const textAnimate = {
@@ -13,12 +13,12 @@ function Bieren() {
     onscreen: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", bounce: 0.4, duration: 3 },
+      transition: { type: "spring", bounce: 0.4, duration: 5 },
     },
   };
   return (
     <motion.div
-      transition={{ staggerChildren: 0.2 }}
+      transition={{ staggerChildren: 0.3 }}
       initial={"offscreen"}
       whileInView={"onscreen"}
       viewport={{once:true, amount:0.5}}
@@ -33,11 +33,11 @@ function Bieren() {
         />
       </motion.div>
       <div className="background-color">
-        <div className="container-card">
+        <div  className="container-card">
           <motion.h1 variants={textAnimate} className="PageTitleRight">
             Bieren Van't Vat
           </motion.h1>
-          <div className="contact-container">
+
             <div className="content-description">
               <motion.p variants={textAnimate}>
                 Een van de kenmerken van café LaPaz zijn de bieren van’t vat
@@ -56,7 +56,7 @@ function Bieren() {
                 zeker en vast eentje vinden die bij jouw smaak zal passen!
               </motion.p>
             </div>
-          </div>
+
         </div>
       </div>
     </motion.div>

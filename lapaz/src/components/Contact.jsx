@@ -1,10 +1,26 @@
 import "../style/style.scss";
 import facebook from "../assets/img/facebook.png";
+import { motion, Variants } from "framer-motion";
 
 function Contact() {
+  const textAnimate = {
+    offscreen: { y: -100, opacity: 0 },
+    onscreen: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", bounce: 0.4, duration: 3 },
+    },
+  };
   return (
-    <div className="Contact" id="Contact">
-      <div className="background-color">
+    <motion.div
+      transition={{ staggerChildren: 0.3 }}
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 0.5 }}
+      className="Contact"
+      id="Contact"
+    >
+      <motion.div variants={textAnimate} className="background-color">
         <h1 className="PageTitleCenter">Contact</h1>
         <div className="content-description">
           <div className="uren">
@@ -30,9 +46,8 @@ function Contact() {
             </ul>
           </div>
         </div>
-      </div>
-      
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 
