@@ -8,19 +8,11 @@ import { HashLink } from "react-router-hash-link";
 import { motion, Variants } from "framer-motion";
 
 function Hero() {
-  const hoverAnimate = {
-    whileHover: { scale: 1.02, y: -5, transition: "ease", duration: 2 },
-    whileTap: { scale: 1.2 },
-  };
   return (
     <div className="Hero" id="Home">
       <Router>
-        <motion.div initial={"whileHover"} animate={"whileTap"} className="nav">
-          <motion.ul
-            whileHover={"whileHover"}
-            whileTap={"whileTap"}
-            className="nav-list"
-          >
+        <div className="nav">
+          <ul className="nav-list">
             <li className="nav-item">
               <HashLink to="#Home">
                 {" "}
@@ -34,23 +26,67 @@ function Hero() {
               </HashLink>
             </li>
 
-            <motion.li className="nav-item" variants={hoverAnimate}>
+            <motion.li
+              className="nav-item"
+              whileHover={{
+                scale: 1.02,
+                y: -5,
+                transition: "ease",
+                duration: 2,
+              }}
+              whileTap={{
+                scale: 1.2,
+              }}
+            >
               <HashLink to="#Home">Home</HashLink>
             </motion.li>
 
-            <motion.li variants={hoverAnimate}>
+            <motion.li
+              className="nav-item"
+              whileHover={{
+                scale: 1.02,
+                y: -5,
+                transition: "ease",
+                duration: 2,
+              }}
+              whileTap={{
+                scale: 1.2,
+              }}
+            >
               <HashLink to="#OverOns">Over Ons</HashLink>
             </motion.li>
 
-            <motion.li variants={hoverAnimate}>
+            <motion.li
+              className="nav-item"
+              whileHover={{
+                scale: 1.02,
+                y: -5,
+                transition: "ease",
+                duration: 2,
+              }}
+              whileTap={{
+                scale: 1.2,
+              }}
+            >
               <HashLink to="#Contact">Contact</HashLink>
             </motion.li>
 
-            <motion.li variants={hoverAnimate} className="nav-item">
+            <motion.li
+              whileHover={{
+                scale: 1.02,
+                y: -5,
+                transition: "ease",
+                duration: 2,
+              }}
+              whileTap={{
+                scale: 1.2,
+              }}
+              className="nav-item"
+            >
               <HashLink to="#Reserveren">Reserveren</HashLink>
             </motion.li>
-          </motion.ul>
-        </motion.div>
+          </ul>
+        </div>
       </Router>
 
       <div className="banner-area">
