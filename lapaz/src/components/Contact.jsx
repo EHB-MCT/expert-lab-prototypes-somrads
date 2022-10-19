@@ -21,7 +21,7 @@ function Contact() {
       id="Contact"
     >
       <motion.div variants={textAnimate} className="background-color">
-        <h1 className="PageTitleCenter">Contact</h1>
+        <div className="PageTitleCenter">Contact</div>
         <div className="content-description">
           <div className="uren">
             <p>
@@ -39,9 +39,24 @@ function Contact() {
           </div>
           <div className="socials">
             <ul>
-              <li>016 20 01 01</li>
+              <a href="tel:016 20 01 01">
+                <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
+                  016 20 01 01
+                </motion.li>
+              </a>
               <li className="fb-logo">
-                <img src={facebook} alt="facebook-logo" />
+                <a
+                  href="https://www.facebook.com/Lapazleuven"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <motion.img
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 1 }}
+                    src={facebook}
+                    alt="facebook-logo"
+                  />
+                </a>
               </li>
             </ul>
           </div>

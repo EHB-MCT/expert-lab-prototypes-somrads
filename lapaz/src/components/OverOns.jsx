@@ -1,5 +1,5 @@
 import "../style/style.scss";
-import { motion, Variants, useScroll, useTransform } from "framer-motion";
+import { motion, Variants} from "framer-motion";
 
 function OverOns() {
   const titleAnimate = {

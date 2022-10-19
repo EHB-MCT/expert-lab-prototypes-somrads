@@ -5,7 +5,7 @@ import { motion, Variants } from "framer-motion";
 function Bieren() {
   const imageAnimate = {
     offscreen: { x: -100, opacity:0 },
-    onscreen: { x: 0, transition: { type: "spring", stiffness: 100, damping: 3}, opacity:1 },
+    onscreen: { x: 0, transition: { type: "spring", stiffness: 100, damping: 7}, opacity:1 },
   };
 
   const textAnimate = {

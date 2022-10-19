@@ -143,6 +143,10 @@ body {
     ul {
       list-style: none;
     }
+    a{
+      text-decoration: none ;
+      color: #362112;
+    }
     .fb-logo {
       width: 40px;
       img {
@@ -171,7 +175,7 @@ body {
 .Reserveren {
   display: flex;
   justify-content: space-between;
-  margin: 5% 0% 25% 0%;
+  margin: 10% 0% 20% 0%;
   .reserveren-container,
   .gallerij {
     margin-right: 5rem;

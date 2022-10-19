@@ -3,6 +3,10 @@ import terras from "../assets/img/terras.jpg";
 import { motion, Variants } from "framer-motion";
 
 function Terras() {
+  const titleAnimate = {
+    offscreen: { y: -100, opacity: 0 },
+    onscreen: { y: 0, opacity: 1, type: "spring", bounce: 0.6, duration: 1 },
+  };
   const textAnimate = {
     offscreen: { y: 0, opacity: 0 },
     onscreen: {
@@ -15,7 +19,7 @@ function Terras() {
     offscreen: { x: 100, opacity: 0 },
     onscreen: {
       x: 0,
-      transition: { type: "spring", stiffness: 100, damping: 5 },
+      transition: { type: "spring", stiffness: 100, damping: 7 },
       opacity: 1,
     },
   };
@@ -29,7 +33,13 @@ function Terras() {
       viewport={{ once: true, amount: 0.5 }}
     >
       <div className="terras-container">
-        <motion.img variants={imageAnimate} className="image" src={terras} alt="terras" loading="lazy" />
+        <motion.img
+          variants={imageAnimate}
+          className="image"
+          src={terras}
+          alt="terras"
+          loading="lazy"
+        />
         <motion.div variants={textAnimate} className="container-card">
           <h1 className="PageTitleLeft">Terras</h1>
           <motion.div className="content-description">
