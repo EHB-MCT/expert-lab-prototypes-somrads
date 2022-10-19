@@ -1,10 +1,16 @@
 import "../style/style.scss";
 import "../style/form.scss";
 import GALLERY from "../assets/img/gallerij";
-import { motion, Variants } from "framer-motion";
+import { data } from "../assets/img/gallerij/Data";
+import {
+  motion,
+  AnimatePresence,
+  AnimateSharedLayout,
+} from "framer-motion";
 import { useState } from "react";
 
 function Reserveren() {
+  const [selectedId, setSelectedId] = useState(null);
   const textAnimate = {
     offscreen: { y: -100, opacity: 0 },
     onscreen: {
@@ -76,14 +82,35 @@ function Reserveren() {
           <div className="gallerij-container">
             <h1 className="PageTitleLeft">Gallerij</h1>
             <div className="image-grid">
-              <img src={GALLERY.raam} alt="window" loading="lazy" />
+              {/* <img src={GALLERY.raam} alt="window" loading="lazy" />
               <img src={GALLERY.mensen} alt="mensen" loading="lazy" />
               <img src={GALLERY.glass} alt="glass" loading="lazy" />
-              <img src={GALLERY.flessen} alt="flessen" loading="lazy" />
+              <img src={GALLERY.flessen} alt="flessen" loading="lazy" /> */}
             </div>
           </div>
         </motion.div>
       </motion.div>
+      <div>
+        <div className="image-grid">
+          {data.map((item) => (
+            <motion.div
+              layoutId={item.id}
+              onClick={() => setSelectedId(item.id)}
+            >
+              <motion.img src={item.id} alt={item.name} />
+            </motion.div>
+          ))}
+
+          <AnimatePresence>
+            {selectedId && (
+              <motion.div layoutId={selectedId}>
+                <motion.img src={data.image} alt={data.name} />
+                <motion.button onClick={() => setSelectedId(null)} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
     </motion.div>
   );
 }
