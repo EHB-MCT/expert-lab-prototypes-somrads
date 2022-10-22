@@ -1,16 +1,45 @@
 import "../style/style.scss";
 import "../style/form.scss";
-import GALLERY from "../assets/img/gallerij";
-import { data } from "../assets/img/gallerij/Data";
-import {
-  motion,
-  AnimatePresence,
-  AnimateSharedLayout,
-} from "framer-motion";
-import { useState } from "react";
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { data } from "./Data";
+import React, { useState, useRef } from "react";
+import Imagepopup from "./Imagepopup";
+import emailjs from "@emailjs/browser";
 
 function Reserveren() {
-  const [selectedId, setSelectedId] = useState(null);
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_qk2cqqb",
+        "template_znk3mqq",
+        form.current,
+        "22JCmVh61Hv51r8Bl"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message send");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+  const [popup, setPopup] = useState(false);
+  const [layoutId, setlayoutId] = useState(null);
+  const poper = (id) => {
+    if (popup === false) {
+      setlayoutId(id);
+      setPopup(!popup);
+    } else {
+      setPopup(!popup);
+      setlayoutId(null);
+    }
+  };
   const textAnimate = {
     offscreen: { y: -100, opacity: 0 },
     onscreen: {
@@ -30,32 +59,40 @@ function Reserveren() {
       id="Reserveren"
     >
       <motion.div variants={textAnimate} className="form">
-        <form>
+        <form ref={form} onSubmit={sendEmail}>
           <label>
             Naam
-            <motion.input
-              type="text"
-              name="name"
-              placeholder="Jouw naam"
-              input
-            />
+            <input type="text" name="user_name" placeholder="Jouw naam" input />
           </label>
 
           <label>
             Voornaam
-            <input type="text" name="first-name" placeholder="Jouw voornaam" />
+            <input
+              name="user_firstName"
+              type="text"
+              placeholder="Jouw voornaam"
+            />
           </label>
 
           <label>
             E-mail
-            <input type="email" name="email" placeholder="Jouw email adres" />
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Jouw email adres"
+            />
           </label>
 
           <label>
             Boodschap
-            <textarea rows="10" placeholder="Typ hier je boodschap"></textarea>
+            <textarea
+              name="message"
+              rows="10"
+              placeholder="Typ hier je boodschap"
+            ></textarea>
           </label>
 
+          <input className="button" type="submit" value="Send" />
           <motion.button
             whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", bounce: 0.4, duration: 1 }}
@@ -77,40 +114,36 @@ function Reserveren() {
             dan verder contacteren over de nodige details!
           </div>
         </div>
-
-        <motion.div variants={textAnimate} className="gallerij">
-          <div className="gallerij-container">
-            <h1 className="PageTitleLeft">Gallerij</h1>
-            <div className="image-grid">
-              {/* <img src={GALLERY.raam} alt="window" loading="lazy" />
-              <img src={GALLERY.mensen} alt="mensen" loading="lazy" />
-              <img src={GALLERY.glass} alt="glass" loading="lazy" />
-              <img src={GALLERY.flessen} alt="flessen" loading="lazy" /> */}
+        <AnimateSharedLayout>
+          <motion.div variants={textAnimate} className="gallerij">
+            <div className="gallerij-container">
+              <h1 className="PageTitleLeft">Galerij</h1>
+              <div className="image-grid">
+                {" "}
+                {data.map((item) => {
+                  return (
+                    <motion.div
+                      className="image-card"
+                      onClick={() => poper(item.id)}
+                    >
+                      <motion.img
+                        src={`.././gallerij/${item.image}`}
+                        alt={item.name}
+                        layoutId={item.id}
+                      />
+                    </motion.div>
+                  );
+                })}
+              </div>
+              <AnimatePresence>
+                <div className="image-popup">
+                  {popup && <Imagepopup poper={poper} layoutId={layoutId} />}
+                </div>
+              </AnimatePresence>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </AnimateSharedLayout>
       </motion.div>
-      <div>
-        <div className="image-grid">
-          {data.map((item) => (
-            <motion.div
-              layoutId={item.id}
-              onClick={() => setSelectedId(item.id)}
-            >
-              <motion.img src={item.id} alt={item.name} />
-            </motion.div>
-          ))}
-
-          <AnimatePresence>
-            {selectedId && (
-              <motion.div layoutId={selectedId}>
-                <motion.img src={data.image} alt={data.name} />
-                <motion.button onClick={() => setSelectedId(null)} />
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </div>
     </motion.div>
   );
 }

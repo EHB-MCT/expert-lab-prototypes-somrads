@@ -9,7 +9,6 @@ import Reserveren from "./components/Reserveren";
 import Footer from "./components/Footer";
 
 import React from "react";
-import {motion, Variants} from "framer-motion"
 
 function App() {
   return (
