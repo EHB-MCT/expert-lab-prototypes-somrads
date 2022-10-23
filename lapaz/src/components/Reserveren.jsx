@@ -31,6 +31,7 @@ function Reserveren() {
   };
   const [popup, setPopup] = useState(false);
   const [layoutId, setlayoutId] = useState(null);
+
   const poper = (id) => {
     if (popup === false) {
       setlayoutId(id);
@@ -92,7 +93,16 @@ function Reserveren() {
             ></textarea>
           </label>
 
-          <input className="button" type="submit" value="Send" />
+          <motion.input
+            whileHover={{ scale: 1.2 }}
+            transition={{ type: "spring", bounce: 0.4, duration: 1 }}
+            whileTap={{
+              scale: 1.3,
+            }}
+            className="button"
+            type="submit"
+            value="Verstuur"
+          />
           <motion.button
             whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", bounce: 0.4, duration: 1 }}
@@ -105,6 +115,7 @@ function Reserveren() {
           </motion.button>
         </form>
       </motion.div>
+
       <motion.div variants={textAnimate} className="reserveren-wrap">
         <div className="reserveren-container">
           <h1 className="PageTitleRight">Reserveren</h1>
@@ -127,6 +138,15 @@ function Reserveren() {
                       onClick={() => poper(item.id)}
                     >
                       <motion.img
+                        whileHover={{ scale: 1.05 }}
+                        transition={{
+                          type: "spring",
+                          bounce: 0.2,
+                          duration: 1,
+                        }}
+                        whileTap={{
+                          scale: 1.1,
+                        }}
                         src={`.././gallerij/${item.image}`}
                         alt={item.name}
                         layoutId={item.id}
@@ -136,9 +156,9 @@ function Reserveren() {
                 })}
               </div>
               <AnimatePresence>
-                <div className="image-popup">
+                <motion.div className="image-popup">
                   {popup && <Imagepopup poper={poper} layoutId={layoutId} />}
-                </div>
+                </motion.div>
               </AnimatePresence>
             </div>
           </motion.div>

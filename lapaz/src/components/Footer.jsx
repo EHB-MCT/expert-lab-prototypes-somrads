@@ -22,15 +22,22 @@ function Footer() {
   return (
     <div className="Footer">
       <div className="container-footer">
-        <ul className="logo">
-          <li>
-            <img src={logo} alt="lapas logo" loading="lazy" />
-          </li>
-          <span className="since">
-            <li>Since 2002</li>
-          </span>
-        </ul>
         <Router>
+          <ul className="logo">
+            <li>
+              <HashLink to="#Home">
+                <motion.img
+                  whileHover={{ scale: 1.2 }}
+                  src={logo}
+                  alt="lapas logo"
+                  loading="lazy"
+                />
+              </HashLink>
+            </li>
+            <span className="since">
+              <li>Since 2002</li>
+            </span>
+          </ul>
           <ul>
             <motion.li
               whileHover={"whileHover"}
@@ -79,19 +86,19 @@ function Footer() {
             </motion.li>
           </a>
           <li className="fb">
-          <a
-                  href="https://www.facebook.com/Lapazleuven"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <motion.img
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 1 }}
-                    src={facebook}
-                    alt="facebook-logo"
-                    loading="lazy"
-                  />
-                </a>
+            <a
+              href="https://www.facebook.com/Lapazleuven"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.img
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 1 }}
+                src={facebook}
+                alt="facebook-logo"
+                loading="lazy"
+              />
+            </a>
           </li>
         </ul>
 

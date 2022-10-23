@@ -5,11 +5,12 @@ import logo from "../assets/img/logo.png";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 function Hero() {
   return (
     <div className="Hero" id="Home">
+      
       <Router>
         <div className="nav">
           <ul className="nav-list">
