@@ -23,6 +23,7 @@ function Reserveren() {
         (result) => {
           console.log(result.text);
           console.log("message send");
+          alert("Form sent")
         },
         (error) => {
           console.log(error.text);
@@ -93,7 +94,7 @@ function Reserveren() {
             ></textarea>
           </label>
 
-          <motion.input
+          <motion.button
             whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", bounce: 0.4, duration: 1 }}
             whileTap={{
@@ -102,14 +103,6 @@ function Reserveren() {
             className="button"
             type="submit"
             value="Verstuur"
-          />
-          <motion.button
-            whileHover={{ scale: 1.2 }}
-            transition={{ type: "spring", bounce: 0.4, duration: 1 }}
-            whileTap={{
-              scale: 1.3,
-            }}
-            className="button"
           >
             Verstuur
           </motion.button>
