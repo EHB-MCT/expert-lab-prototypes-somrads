@@ -24,19 +24,19 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     console.log(`User ${socket.id} disconnected.`);
     users = users.filter((user) => user !== socket.id);
-    console.log("disconnected all users:",users);
+    console.log("disconnected all users:", users);
     socket.broadcast.emit("updateUsers", users);
     socket.disconnect();
   });
 
   // Fetch users array
   socket.emit("getAllUsers", users);
-  console.log("all users:",users);
+  console.log("all users:", users);
 
   // Create Rooms
   socket.on("createRoom", () => {
     const room = {
-      id: nanoid(7),
+      id: nanoid(5),
       chat: [],
     };
     socket.join(room);

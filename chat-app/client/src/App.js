@@ -7,7 +7,7 @@ function App() {
   const [socketId, setSocketId] = useState("");
   const [message, setMessage] = useState("");
   const [rooms, setRooms] = useState([]);
-  const [users, setUsers] = useState("");
+  const [users, setUsers] = useState([]);
   const [joinedRoom, setJoinedRoom] = useState(false);
   const [room, setRoom] = useState("");
   const [chat, setChat] = useState([]);
@@ -83,10 +83,54 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <>
       <h1 className="mainHeading">spacechat</h1>
-      <h1 className="mySocket">{socketId}</h1>
-    </div>
+      <h1 className="mySocket">Me:{socketId}</h1>
+      <h3 className="roomJoined">
+        {joinedRoom === true
+          ? `Space Room ${room}`
+          : "You are not joined in any space room"}
+      </h3>
+
+      {!joinedRoom && (
+        <div className="container">
+          <div className="users-container">
+            <h2 className="usersHeading">Online Users:</h2>
+            <ul className="users">
+              {users.map((user) => {
+                return (
+                  <li className="user" key={user}>
+                    {user && user === socketId ? `admin` : user}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div className="rooms-container">
+            <h2 className="roomsHeading">Available Space Rooms:</h2>
+
+            {rooms.length === 0 ? (
+              <h3 className="noRooms">No Rooms! Create a space room !</h3>
+            ) : (
+              <ul className="rooms">
+                {rooms.map((room) => {
+                  return (
+                    <li key={room.id} onClick={() => joinRoom(room)}>
+                      {room.id}
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+            <div className="btn-container">
+              <button className="btn" onClick={() => createRoom()}>
+                Create Space Room
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
