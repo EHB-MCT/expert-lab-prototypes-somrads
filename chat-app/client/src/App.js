@@ -20,13 +20,32 @@ function App() {
 
     socket.on("disconnect",()=> {
       socket.disconnect();
-    })
+    });
 
     socket.on("getAllUsers",users=>{
       setUsers(users);
-    })
+    });
+
     //Real time
-    
+    socket.on("updateUsers",users=>{
+      setUsers(users)
+    });
+
+    socket.on('getAllRooms', rooms=>{
+      setRooms(rooms)
+    });
+
+    //Real time
+    socket.on("updateRooms",rooms=>{
+      setRooms(rooms)
+    });
+
+    //Rooms
+    socket.on('chat',(payLoad)=> {
+      setChat(payLoad.chat)
+    });
+
+
   },[chat, rooms]);
 
   return (
