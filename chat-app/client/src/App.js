@@ -100,7 +100,7 @@ function App() {
               {users.map((user) => {
                 return (
                   <li className="user" key={user}>
-                    {user && user === socketId ? `admin` : user}
+                    {user && user === socketId ? `me` : user}
                   </li>
                 );
               })}
