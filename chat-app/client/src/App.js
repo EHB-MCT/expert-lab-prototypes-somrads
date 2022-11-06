@@ -44,7 +44,7 @@ function App() {
     socket.on("chat", (payLoad) => {
       setChat(payLoad.chat);
     });
-    
+
     //auto scroll
     if (joinedRoom === true) {
       chatContainer.current.scrollIntoView({
@@ -66,6 +66,14 @@ function App() {
       block: "end",
     });
   };
+
+  const createRoom = () => {
+    socket.emit("createRoom")
+    socket.on('getRoom',(room)=> {
+      setRooms([...rooms, room])
+    })
+  };
+
 
   return (
     <div className="App">
