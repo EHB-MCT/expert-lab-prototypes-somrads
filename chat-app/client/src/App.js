@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import io from "socket.io-client";
 import "./App.css";
+const socket = io("http://localhost:5000");
 
 function App() {
   const [socketId, setSocketId] = useState("");
@@ -17,6 +18,7 @@ function App() {
 
   useEffect(() => {
     socket.on("me", (id) => setSocketId(id));
+    console.log("is connected");
 
     socket.on("disconnect", () => {
       socket.disconnect();
@@ -78,13 +80,13 @@ function App() {
     socket.emit("joinRoom", room);
     setRoom(room.id);
     setJoinedRoom(true);
-
     setChat(room.chat);
   };
 
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <h1 className="mainHeading">spacechat</h1>
+      <h1 className="mySocket">{socketId}</h1>
     </div>
   );
 }

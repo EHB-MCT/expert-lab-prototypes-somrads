@@ -1,18 +1,19 @@
 const app = require("express")();
 const server = require("http").createServer(app);
 const PORT = 5000;
-const {nanoid} = require("nanoid")
+const { nanoid } = require("nanoid");
 const io = require("socket.io")(server, {
   cors: {
     origin: "*",
   },
 });
 
-const users = [];
-const rooms = [];
+let users = [];
+let rooms = [];
 
 // User connect
 io.on("connection", (socket) => {
+  console.log(`User connected: ${socket.id}`);
   socket.emit("me", socket.id);
   users.push(socket.id);
 
@@ -21,22 +22,26 @@ io.on("connection", (socket) => {
 
   // User disconnect
   socket.on("disconnect", () => {
+    console.log(`User ${socket.id} disconnected.`);
     users = users.filter((user) => user !== socket.id);
+    console.log("disconnected all users:",users);
     socket.broadcast.emit("updateUsers", users);
     socket.disconnect();
   });
 
   // Fetch users array
   socket.emit("getAllUsers", users);
+  console.log("all users:",users);
 
   // Create Rooms
   socket.on("createRoom", () => {
     const room = {
-      id: nanoid(5),
+      id: nanoid(7),
       chat: [],
     };
     socket.join(room);
     socket.emit("getRoom", room);
+    console.log("Room created: " + room.id);
     rooms.push(room);
     socket.broadcast.emit("updateRooms", rooms);
   });
@@ -44,16 +49,19 @@ io.on("connection", (socket) => {
   //Join Rooms
   socket.on("joinRoom", (room) => {
     socket.join(room.id);
+    console.log(`user ${socket.id} joined room: ${room.id}`);
   });
-  socket.emit('getAllRooms',rooms);
+  socket.emit("getAllRooms", rooms);
   socket.broadcast.emit("updateRooms", rooms);
 
   // Message
   socket.on("message", (payLoad) => {
+    console.log(`Message from ${socket.id} : ${payLoad.message}`);
     rooms.map((room) => {
       if (room.id === payLoad.room) {
         singleChat = { message: payLoad.message, writer: payLoad.socketId };
         room.chat.push(singleChat);
+        payLoad.chat = room.chat;
       }
     });
     // sends message to given room
