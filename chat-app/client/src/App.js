@@ -12,13 +12,12 @@ function App() {
   const [room, setRoom] = useState("");
   const [chat, setChat] = useState([]);
 
-  const socket = io("http://localhost:5000");
-
   const chatContainer = useRef(null);
 
   useEffect(() => {
-    socket.on("me", (id) => setSocketId(id));
-    console.log("is connected");
+    socket.on("me", (id) => {
+      setSocketId(id);
+    });
 
     socket.on("disconnect", () => {
       socket.disconnect();
