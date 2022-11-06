@@ -1,7 +1,7 @@
 const app = require("express")();
 const server = require("http").createServer(app);
 const PORT = 5000;
-const { nanoid } = require("nanoid");
+const {nanoid} = require("nanoid")
 const io = require("socket.io")(server, {
   cors: {
     origin: "*",
@@ -45,7 +45,7 @@ io.on("connection", (socket) => {
   socket.on("joinRoom", (room) => {
     socket.join(room.id);
   });
-  socket.emit("getAllRooms", rooms);
+  socket.emit('getAllRooms',rooms);
   socket.broadcast.emit("updateRooms", rooms);
 
   // Message

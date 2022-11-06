@@ -11,42 +11,61 @@ function App() {
   const [room, setRoom] = useState("");
   const [chat, setChat] = useState([]);
 
-  const socket = io('http://localhost:5000');
+  const socket = io("http://localhost:5000");
 
-  useEffect(()=> {
-    socket.on('me',id=>(
-      setSocketId(id)
-    ));
+  const chatContainer = useRef(null);
 
-    socket.on("disconnect",()=> {
+  useEffect(() => {
+    socket.on("me", (id) => setSocketId(id));
+
+    socket.on("disconnect", () => {
       socket.disconnect();
     });
 
-    socket.on("getAllUsers",users=>{
+    socket.on("getAllUsers", (users) => {
       setUsers(users);
     });
 
     //Real time
-    socket.on("updateUsers",users=>{
-      setUsers(users)
+    socket.on("updateUsers", (users) => {
+      setUsers(users);
     });
 
-    socket.on('getAllRooms', rooms=>{
-      setRooms(rooms)
+    socket.on("getAllRooms", (rooms) => {
+      setRooms(rooms);
     });
 
     //Real time
-    socket.on("updateRooms",rooms=>{
-      setRooms(rooms)
+    socket.on("updateRooms", (rooms) => {
+      setRooms(rooms);
     });
 
     //Rooms
-    socket.on('chat',(payLoad)=> {
-      setChat(payLoad.chat)
+    socket.on("chat", (payLoad) => {
+      setChat(payLoad.chat);
     });
+    
+    //auto scroll
+    if (joinedRoom === true) {
+      chatContainer.current.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+      });
+    }
+  }, [chat, rooms]);
 
-
-  },[chat, rooms]);
+  const sendMessage = () => {
+    const payload = { message, room, socketId };
+    socket.emit("message", payload);
+    setMessage("");
+    socket.on("chat", (payload2) => {
+      setChat(payload2.chat);
+    });
+    chatContainer.current.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+    });
+  };
 
   return (
     <div className="App">
