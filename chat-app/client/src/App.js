@@ -68,12 +68,19 @@ function App() {
   };
 
   const createRoom = () => {
-    socket.emit("createRoom")
-    socket.on('getRoom',(room)=> {
-      setRooms([...rooms, room])
-    })
+    socket.emit("createRoom");
+    socket.on("getRoom", (room) => {
+      setRooms([...rooms, room]);
+    });
   };
 
+  const joinRoom = (room) => {
+    socket.emit("joinRoom", room);
+    setRoom(room.id);
+    setJoinedRoom(true);
+
+    setChat(room.chat);
+  };
 
   return (
     <div className="App">
