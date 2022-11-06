@@ -130,6 +130,24 @@ function App() {
           </div>
         </div>
       )}
+      {joinedRoom && (
+        <>
+          <div className="chat-container">
+            <ul className="chat-list" id="chat-list" ref={chatContainer}>
+              {chat.map((chat, index) => {
+                <li
+                  key={index}
+                  className={chat.writer === socketId ? "chat-me" : "chat-user"}
+                >
+                  {chat.writer === socketId
+                    ? `${chat.message}: Me`
+                    : `User(${chat.writer.slice(0, 5)}):`}
+                </li>;
+              })}
+            </ul>
+          </div>
+        </>
+      )}
     </>
   );
 }
