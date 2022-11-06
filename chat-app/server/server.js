@@ -22,5 +22,19 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     users = users.filter((user) => user !== socket.id);
+    socket.broadcast.emit("updateUsers", users);
+    socket.disconnect();
   });
+
+  socket.emit("getAllUsers", users);
+
+  // Rooms
+  socket.on("createRoom", () => {
+    const room = {
+      id: nanoid(5),
+      chat: [],
+    };
+  });
+
+  
 });
