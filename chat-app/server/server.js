@@ -15,7 +15,7 @@ let rooms = [];
 io.on("connection", (socket) => {
   console.log(`User connected: ${socket.id}`);
   socket.emit("me", socket.id);
-  users.push(socket.id);
+  users.push(socket.id); 
 
   // Updating users array
   socket.broadcast.emit("updateUsers", users);

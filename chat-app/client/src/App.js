@@ -134,18 +134,36 @@ function App() {
         <>
           <div className="chat-container">
             <ul className="chat-list" id="chat-list" ref={chatContainer}>
-              {chat.map((chat, index) => {
+              {chat.map((chat, index) => (
                 <li
                   key={index}
                   className={chat.writer === socketId ? "chat-me" : "chat-user"}
                 >
                   {chat.writer === socketId
-                    ? `${chat.message}: Me`
-                    : `User(${chat.writer.slice(0, 5)}):`}
-                </li>;
-              })}
+                    ? `Me:${chat.message}`
+                    : `User (${chat.writer.slice(0, 5)}): ${chat.message}`}
+                </li>
+              ))}
             </ul>
           </div>
+
+          <form className="chat-form" onSubmit={(e) => e.preventDefault()}>
+            <input
+              type="text"
+              placeholder="Your message"
+              autoFocus
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
+            />
+
+            <button
+              className="send-btn"
+              type="submit"
+              onClick={() => sendMessage()}
+            >
+              Send
+            </button>
+          </form>
         </>
       )}
     </>
