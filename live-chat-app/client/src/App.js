@@ -1,10 +1,18 @@
-import React from 'react'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-function app() {
+import Chat from "./components/Chat";
+import Join from "./components/Join";
+
+function App() {
   return (
-    <div>app</div>
-  )
+    <Router>
+      <Routes>
+      <Route path="/" exact element={<Join />} />
+      <Route path="/chat" exact element={<Chat />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default app
+export default App;
