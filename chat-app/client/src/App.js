@@ -84,12 +84,13 @@ function App() {
 
   return (
     <>
+      {/* <div className="background-img"></div> */}
       <h1 className="mainHeading">spacechat</h1>
-      <h1 className="mySocket">Me:{socketId}</h1>
+      <h1 className="mySocket">Hello, {socketId}</h1>
       <h3 className="roomJoined">
         {joinedRoom === true
           ? `Space Room ${room}`
-          : "You are not joined in any space room"}
+          : "Talk with your fellow space fanatics about the wonders of space. Join a space room!"}
       </h3>
 
       {!joinedRoom && (
@@ -106,6 +107,7 @@ function App() {
               })}
             </ul>
           </div>
+          
           <div className="rooms-container">
             <h2 className="roomsHeading">Available Space Rooms:</h2>
 
@@ -130,6 +132,8 @@ function App() {
           </div>
         </div>
       )}
+ 
+      
       {joinedRoom && (
         <>
           <div className="chat-container">

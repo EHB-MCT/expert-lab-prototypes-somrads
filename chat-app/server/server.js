@@ -33,6 +33,9 @@ io.on("connection", (socket) => {
   socket.emit("getAllUsers", users);
   console.log("all users:", users);
 
+  // Join users
+  // socket.on("joinUser", (user))
+
   // Create Rooms
   socket.on("createRoom", () => {
     const room = {
