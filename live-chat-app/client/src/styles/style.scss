@@ -1,0 +1,14 @@
+$primaryColor: #292660;
+$secondaryColor: #B283B2;
+$textColor: #F3F2F3;
+$boxColor: #121030;
+$buttonColor: #121030;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: $primaryColor;
+}

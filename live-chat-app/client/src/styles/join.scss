@@ -1,0 +1,132 @@
+$primaryColor: #292660;
+$secondaryColor: #b283b2;
+$textColor: #f3f2f3;
+$boxColor: #121030;
+$buttonColor: #121030;
+
+.container {
+  margin: 1% 3% 3% 3%;
+
+  .background-img {
+    position: absolute;
+    left: 65%;
+    top: 7%;
+    z-index: -1;
+    margin: 0;
+    width: 30%;
+    height: 90vh;
+    background-image: url("./assets/astronaut.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: floating 6s ease-in-out infinite;
+  }
+
+  .background-img2 {
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    z-index: -1;
+    margin: 0;
+    width: 30%;
+    height: 200px;
+    background-image: url("./assets/planet.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: floating 7s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translatey(0px) rotate(-7deg);
+    }
+    50% {
+      transform: translatey(-20px) rotate(-6deg);
+    }
+    100% {
+      transform: translatey(0px) rotate(-7deg);
+    }
+  }
+
+  .text-container {
+    display: flex;
+    justify-content: center;
+    .text {
+      flex-direction: column;
+      h1 {
+        text-align: center;
+        margin: 5%;
+        margin-top: 10%;
+        font-family: "Phosphate";
+        color: $secondaryColor;
+        font-weight: 100;
+        font-size: 5em;
+      }
+      h2 {
+        text-align: center;
+        font-family: "Helvetica Nue Light, Arial, sans-serif";
+        font-weight: 100;
+        color: $textColor;
+      }
+    }
+  }
+  .input-area-container {
+    .input-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 8% 5% 5% 5%;
+    }
+    .username,
+    .room {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-family: "Helvetica Nue Light, Arial, sans-serif";
+      font-size: 1.2em;
+      color: $textColor;
+      margin: 0% 5% 0% 5%;
+      padding: 4%;
+      background-color: #0f0d29db;
+      border: none;
+      border-radius: 5px;
+      h3 {
+        padding-bottom: 10%;
+        width: 300px;
+        font-weight: 350;
+        text-align: center;
+      }
+      input {
+        margin-top: 4%;
+        padding: 3% 12% 3% 12%;
+        background-color: #b283b2;
+        border-radius: 5px;
+        border: none;
+      }
+    }
+  }
+  .button {
+    margin: 0;
+    position: absolute;
+    left: 47%;
+    button {
+      background-color: $buttonColor;
+      border: none;
+      border-radius: 5px;
+      color: $textColor;
+      font-family: "Helvetica Nue Light, Arial, sans-serif";
+      font-weight: 400;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #121030d8;
+        color: #b283b2;
+      }
+    }
+  }
+}

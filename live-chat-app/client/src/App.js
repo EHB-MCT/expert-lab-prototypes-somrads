@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Chat from "./components/Chat";
 import Join from "./components/Join";
+import './styles/style.scss'
 
 function App() {
   return (
