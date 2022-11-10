@@ -1,0 +1,183 @@
+$primaryColor: #292660;
+$barColor: #121030;
+$secondaryColor: #b283b2;
+$textColor: #f3f2f3;
+$boxColor: #121030;
+$buttonColor: #121030;
+
+.container {
+  .leftside {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $barColor;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-right: solid $secondaryColor 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      text-align: center;
+      font-family: "Phosphate";
+      color: $secondaryColor;
+      font-weight: 100;
+      font-size: 2.6em;
+    }
+    h2 {
+      text-align: center;
+      font-family: "Helvetica Nue Light, Arial, sans-serif";
+      font-weight: 500;
+      color: $textColor;
+      margin-top: 15%;
+      margin-bottom: 10%;
+    }
+    .onlineUsers {
+      list-style: none;
+      font-family: "Helvetica Nue Light, Arial, sans-serif";
+      font-weight: 100;
+      color: $textColor;
+      font-size: 1.5em;
+      margin-top: 10%;
+      ::before {
+        content: "\2022";
+        color: #b283b2;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+      li {
+        text-align: center;
+        margin-bottom: 100%;
+        &:hover {
+          color: #b283b2;
+          cursor: pointer;
+        }
+      }
+    }
+    button {
+      background-color: $primaryColor;
+      margin-top: 5%;
+      border: none;
+      border-radius: 5px;
+      color: $textColor;
+      font-family: "Helvetica Nue Light, Arial, sans-serif";
+      font-weight: 400;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      &:hover {
+        background-color: $secondaryColor;
+        color: $boxColor;
+      }
+    }
+  }
+  .rightside {
+    .titleBar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      background-color: $barColor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        margin-left: 12%;
+        font-family: "Helvetica Nue Light, Arial, sans-serif";
+        font-weight: 400;
+        color: $textColor;
+      }
+    }
+    .chatBar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background-color: $barColor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .chatInput {
+        display: flex;
+        margin-left: 13%;
+        width: 75%;
+        input {
+          width: 100%;
+          border-radius: 5px;
+          background-color: $secondaryColor;
+          border: none;
+          padding: 15px 50px;
+        }
+        button {
+          background-color: $primaryColor;
+          border: none;
+          border-radius: 5px;
+          color: $textColor;
+          font-family: "Helvetica Nue Light, Arial, sans-serif";
+          font-weight: 400;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          font-size: 16px;
+          margin-left: 3%;
+          cursor: pointer;
+          &:hover {
+            background-color: $secondaryColor;
+            color: $boxColor;
+          }
+        }
+      }
+    }
+    .chatdisplay {
+      display: flex;
+      flex-direction: column;
+      width: 83%;
+      height: 650px;
+      margin: 8% 18% 15%;
+      .messages {
+        .messageLeft {
+          // width: 20%;
+          // border: 2px solid #dedede;
+          // background-color: #f1f1f1;
+          // border-radius: 5px;
+          // padding: 10px;
+          // margin: 10px 0;
+          // background-color: $buttonColor;
+          // border: none;
+          // border-radius: 5px;
+          // color: $textColor;
+          // font-family: "Helvetica Nue Light, Arial, sans-serif";
+          // font-weight: 100;
+          // padding: 15px 32px;
+          // text-align: center;
+          // text-decoration: none;
+          // display: inline-block;
+          // font-size: 16px;
+          // margin: 4px 2px;
+          // cursor: pointer;
+          border: 2px solid #dedede;
+          background-color: #f1f1f1;
+          border-radius: 5px;
+          padding: 10px;
+          margin: 10px 0;
+          float: left;
+        }
+        .messageRight{
+          border: 2px solid #dedede;
+          background-color: #f1f1f1;
+          border-radius: 5px;
+          padding: 10px;
+          margin: 10px 0;
+          float: right;
+        }
+      }
+    }
+  }
+}

@@ -6,7 +6,6 @@ $buttonColor: #121030;
 
 .container {
   margin: 1% 3% 3% 3%;
-
   .background-img {
     position: absolute;
     left: 65%;
@@ -18,7 +17,7 @@ $buttonColor: #121030;
     background-image: url("./assets/astronaut.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    animation: floating 6s ease-in-out infinite;
+    animation: floating 6s ease-in-out infinite alternate;
   }
 
   .background-img2 {
@@ -27,12 +26,12 @@ $buttonColor: #121030;
     top: 65%;
     z-index: -1;
     margin: 0;
-    width: 30%;
+    width: 20%;
     height: 200px;
     background-image: url("./assets/planet.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    animation: floating 7s ease-in-out infinite;
+    animation: floating 6s ease-in-out infinite alternate-reverse;
   }
 
   @keyframes floating {
