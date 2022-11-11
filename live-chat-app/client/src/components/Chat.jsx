@@ -9,21 +9,24 @@ let socket;
 function Chat() {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
-  const ENDPOINT = 'localhost:5000'
+  const ENDPOINT = "localhost:5000";
 
   useEffect(() => {
     const { name, room } = queryString.parse(window.location.search);
-    setName(name)
-    setRoom(room)
-    console.log("NAME:", name,'ROOM:', room);
+    setName(name);
+    setRoom(room);
+    console.log("NAME:", name, "ROOM:", room);
 
     socket = io(ENDPOINT);
-    console.log("SOCKET:",socket);
+    console.log("SOCKET:", socket);
 
-    socket.emit('join', {name, room})
+    socket.emit("join", { name, room }, () => {});
 
-
-  },[ENDPOINT]);
+    return () => {
+      socket.emit("disconnect");
+      socket.off();
+    };
+  }, [ENDPOINT]);
 
   return (
     <div className="container">

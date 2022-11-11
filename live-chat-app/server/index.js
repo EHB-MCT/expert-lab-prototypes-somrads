@@ -17,11 +17,9 @@ const io = socketio(server, {
 io.on("connection", (socket) => {
   console.log("User is connected");
 
-  socket.on('join', ({name, room},callback)=>{
-    console.log("We have user:",name,", In the room:", room);
-
-    callback()
-  })
+  socket.on("join", ({ name, room }) => {
+    console.log("We have user:", name, ", In the spaceroom:", room);
+  });
 
   socket.on("disconnect", () => {
     console.log("User had left");
