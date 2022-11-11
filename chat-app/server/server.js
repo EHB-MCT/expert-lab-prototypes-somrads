@@ -6,7 +6,7 @@ const io = require("socket.io")(server, {
   cors: {
     origin: "*",
   },
-});
+});  
 
 let users = [];
 let rooms = [];

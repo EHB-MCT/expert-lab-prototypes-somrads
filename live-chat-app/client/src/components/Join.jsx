@@ -7,33 +7,55 @@ function Join() {
   const [room, setRoom] = useState("");
 
   return (
-      <div className="container">
-            <div className="background-img"></div>
-            <div className="background-img2"></div>
-        <div className="text-container">
-          <div className="text">
-            <h1>spacechat</h1>
-            <h2>
-              Talk with your fellow space fanatics about the wonders of space
-            </h2>
-          </div>
-        </div>
-        <div className="input-area-container">
-          <div className="input-container">
-            <div className="username">
-              <h3>Enter your username</h3>
-              <input type="text" />
-            </div>
-            <div className="room">
-              <h3>Join a space room</h3>
-              <input type="text" />
-            </div>
-          </div>
-        </div>
-        <div className="button">
-          <button>Lift Off</button>
+    <div className="container">
+      <div className="background-img"></div>
+      <div className="background-img2"></div>
+      <div className="text-container">
+        <div className="text">
+          <h1>spacechat</h1>
+          <h2>
+            Talk with your fellow space fanatics about the wonders of space
+          </h2>
         </div>
       </div>
+      <div className="input-area-container">
+        <div className="input-container">
+
+          <div className="username">
+            <h3>Enter your username</h3>
+            <input
+              type="text"
+              className="joinInput"
+              onChange={(event) => {
+                setName(event.target.value);
+              }}
+            />
+          </div>
+
+          <div className="room">
+            <h3>Join a space room</h3>
+            <input
+              type="text"
+              className="joinInput mt-20"
+              onChange={(event) => {
+                setRoom(event.target.value);
+              }}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="button">
+        <Link
+          onClick={(event) => (!name || !room ? event.preventDefault() : null)}
+          to={`/chat?&name=${name}&room=${room}`}
+        >
+          <button className="button mt-20" type="submit">
+            Lift Off
+          </button>
+        </Link>
+      </div>
+    </div>
   );
 }
 

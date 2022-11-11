@@ -8,7 +8,11 @@ const router = require('./router');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio(server);
+const io = socketio(server, {
+  cors:{
+    origin: "*",
+  }
+});
 
 io.on('connection',(socket)=>{
 console.log('User is connected');
@@ -23,3 +27,9 @@ app.use(router);
 server.listen(PORT ,() => {
   console.log(`Server is running on port ${PORT}` );
 })
+
+// const io = require("socket.io")(server, {
+//   cors: {
+//     origin: "*",
+//   },
+// });  

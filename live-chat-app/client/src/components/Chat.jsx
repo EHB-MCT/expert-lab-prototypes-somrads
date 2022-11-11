@@ -1,8 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import queryString from "query-string";
+import io from "socket.io-client";
+import { Route, Link, Routes, useLocation } from "react-router-dom";
 import "../styles/chat.scss";
 
+let socket;
+
 function Chat() {
+  const [name, setName] = useState("");
+  const [room, setRoom] = useState("");
+  const ENDPOINT = 'localhost:5000'
+
+  useEffect(() => {
+    const { name, room } = queryString.parse(window.location.search);
+    setName(name)
+    setRoom(room)
+    console.log("NAME:", name,'ROOM:', room);
+
+    socket = io(ENDPOINT);
+    console.log("SOCKET:",socket);
+
+
+  });
+
   return (
     <div className="container">
       <div className="leftside">
@@ -21,7 +41,6 @@ function Chat() {
           <div className="messages">
             <h3 className="messageLeft">Text</h3>
             <h3 className="messageRight">Text</h3>
-
           </div>
         </div>
         <div className="titleBar">
