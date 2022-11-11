@@ -8,7 +8,7 @@ const addUser = ({ id, name, room }) => {
     (user) => user.name === name && user.room === room
   );
   if (usedUser) {
-    return { error: "Username is taken" };
+    return { error: `${name.toUpperCase()} is already taken`};
   }
 
   const user = { id, name, room };

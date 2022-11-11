@@ -20,12 +20,11 @@ function Chat() {
     socket = io(ENDPOINT);
     console.log("SOCKET:", socket);
 
-    socket.emit("join", { name, room }, () => {});
-
-    return () => {
-      socket.emit("disconnect");
-      socket.off();
-    };
+    socket.emit("join", { name, room }, (error) => {
+      if (error) {
+        alert(error);
+      }
+    });
   }, [ENDPOINT]);
 
   return (
