@@ -20,8 +20,10 @@ function Chat() {
     socket = io(ENDPOINT);
     console.log("SOCKET:",socket);
 
+    socket.emit('join', {name, room})
 
-  });
+
+  },[ENDPOINT]);
 
   return (
     <div className="container">
