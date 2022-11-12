@@ -9,6 +9,9 @@ let socket;
 function Chat() {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
+  const [messages, setMessages] = useState([]);
+  const [message, setMessage] = useState("");
+
   const ENDPOINT = "localhost:5000";
 
   useEffect(() => {
@@ -26,6 +29,21 @@ function Chat() {
       }
     });
   }, [ENDPOINT]);
+
+  useEffect(() => {
+    socket.on("message", (message) => {
+      setMessages([...messages, message]);
+    });
+  }, [messages]);
+
+  function sendMessage(event) {
+    event.preventDefault();
+    if (message) {
+      socket.emit("sendMessage", message, () => setMessage(""));
+    }
+  }
+
+  console.log("messages", message, messages);
 
   return (
     <div className="container">
@@ -53,7 +71,14 @@ function Chat() {
         <div className="messages"></div>
         <div className="chatBar">
           <div className="chatInput">
-            <input type="text" />
+            <input
+              value={message}
+              onChange={(event) => setMessage(event.target.value)}
+              onKeyPress={(event) =>
+                event.key === "Enter" ? sendMessage(event) : null
+              }
+              type="text"
+            />
             <button>Send</button>
           </div>
         </div>
