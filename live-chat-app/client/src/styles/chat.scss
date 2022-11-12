@@ -61,7 +61,7 @@ $buttonColor: #121030;
     }
     button {
       background-color: $primaryColor;
-      margin-top: 5%;
+      margin-top: 100%;
       border: none;
       border-radius: 5px;
       color: $textColor;
@@ -139,36 +139,7 @@ $buttonColor: #121030;
       display: flex;
       flex-flow: column nowrap;
       width: 83%;
-      // height: 650px;
       margin: 8% 18% 15%;
-      .messages {
-        .messageLeft, .messageRight {
-          width: 20%;
-          border: 2px solid #dedede;
-          background-color: #f1f1f1;
-          border-radius: 5px;
-          background-color: $buttonColor;
-          border: none;
-          border-radius: 5px;
-          color: $textColor;
-          font-family: "Helvetica Nue Light, Arial, sans-serif";
-          font-weight: 100;
-          padding: 15px 32px;
-          text-align: left;
-          text-decoration: none;
-          font-size: 16px;
-          margin: 4px 2px;
-          cursor: pointer;
-          position: relative;
-          display: block;
-          max-width: 75%;
-          word-wrap: break-word;
-
-        }
-        .messageRight{
-          float: right;
-        }
-      }
     }
   }
 }

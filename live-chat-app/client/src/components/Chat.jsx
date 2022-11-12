@@ -11,6 +11,7 @@ let socket;
 function Chat() {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
+  const [users, setUsers] = useState("");
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("");
 
@@ -36,6 +37,10 @@ function Chat() {
     socket.on("message", (message) => {
       setMessages([...messages, message]);
     });
+
+    socket.on("roomData", ({ users }) => {
+      setUsers(users);
+    });
   }, [messages]);
 
   function sendMessage(event) {
@@ -55,20 +60,23 @@ function Chat() {
           <h1>spacechat</h1>
         </a>
         <h2>Online</h2>
-        <ul className="onlineUsers">
-          <li>{name}</li>
-        </ul>
+        {users ? (
+          <ul className="onlineUsers">
+            {users.map(({ name }) => (
+              <li key={name} className="activeItem">
+                {name}
+              </li>
+            ))}
+          </ul>
+        ) : null}
+
         <button>
           <a href="/">Leave</a>
         </button>
       </div>
       <div className="rightside">
         <div className="chatdisplay">
-          {/* <div className="messages">
-            <h3 className="messageLeft">Text</h3>
-            <h3 className="messageRight">Text</h3>
-          </div> */}
-          <ScrollToBottom>
+          <ScrollToBottom className="messages">
             {messages.map((message, i) => (
               <div key={i}>
                 {" "}
@@ -81,7 +89,6 @@ function Chat() {
         <div className="titleBar">
           <h2>{room}</h2>{" "}
         </div>
-        {/* <div className="messages"></div> */}
         <div className="chatBar">
           <form className="chatInput">
             <input

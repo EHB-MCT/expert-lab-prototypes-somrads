@@ -1,1 +1,66 @@
-// 
+$primaryColor: #292660;
+$barColor: #121030;
+$secondaryColor: #b283b2;
+$textColor: #f3f2f3;
+$boxColor: #121030;
+$buttonColor: #121030;
+
+.messageBox {
+  border-radius: 5px;
+  padding: 15px 20px;
+  display: inline-block;
+  max-width: 80%;
+  margin-bottom: 0.5%;
+}
+
+.messageText {
+  width: 100%;
+  font-family: "Helvetica Nue Light, Arial, sans-serif";
+  font-weight: 100 ;
+  letter-spacing: 0;
+  float: left;
+  font-size: 1.1em;
+  word-wrap: break-word;
+}
+
+.messageContainer {
+  display: flex;
+}
+
+.sentText {
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica Nue Light, Arial, sans-serif";
+  color: $secondaryColor;
+  letter-spacing: 0.3px;
+}
+
+.pl-10 {
+  margin-bottom: 2%;
+  padding-left: 1px;
+}
+
+.pr-10 {
+  margin-bottom: 2%;
+  padding-right: 1px;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.colorWhite {
+  color: $textColor;
+}
+
+.colorDark {
+  color: $textColor;
+}
+
+.backgroundBlue {
+  background: $boxColor;
+}
+
+.backgroundLight {
+  background: #0c0848;
+}
