@@ -20,7 +20,6 @@ function Join() {
       </div>
       <div className="input-area-container">
         <div className="input-container">
-
           <div className="username">
             <h3>Enter your username</h3>
             <input
@@ -51,7 +50,7 @@ function Join() {
           to={`/chat?&name=${name}&room=${room}`}
         >
           <button className="button mt-20" type="submit">
-            Lift Off
+            GO!
           </button>
         </Link>
       </div>
