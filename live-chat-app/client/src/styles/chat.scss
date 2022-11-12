@@ -139,7 +139,7 @@ $buttonColor: #121030;
       display: flex;
       flex-flow: column nowrap;
       width: 83%;
-      height: 650px;
+      // height: 650px;
       margin: 8% 18% 15%;
       .messages {
         .messageLeft, .messageRight {
@@ -171,4 +171,8 @@ $buttonColor: #121030;
       }
     }
   }
+}
+a {
+  text-decoration: none;
+  color: $textColor;
 }

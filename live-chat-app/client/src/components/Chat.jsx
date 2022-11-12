@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import queryString from "query-string";
 import io from "socket.io-client";
-import { Route, Link, Routes, useLocation } from "react-router-dom";
+import ScrollToBottom from "react-scroll-to-bottom";
 import "../styles/chat.scss";
+
+import Message from "./Message";
 
 let socket;
 
@@ -48,30 +50,42 @@ function Chat() {
   return (
     <div className="container">
       <div className="leftside">
-        <h1>spacechat</h1>
+        <a href="/">
+          {" "}
+          <h1>spacechat</h1>
+        </a>
         <h2>Online</h2>
         <ul className="onlineUsers">
-          <li>Tom</li>
-          <li>John</li>
-          <li>Jacob</li>
-          <li>Jesse</li>
+          <li>{name}</li>
         </ul>
-        <button>Leave</button>
+        <button>
+          <a href="/">Leave</a>
+        </button>
       </div>
       <div className="rightside">
         <div className="chatdisplay">
-          <div className="messages">
+          {/* <div className="messages">
             <h3 className="messageLeft">Text</h3>
             <h3 className="messageRight">Text</h3>
-          </div>
+          </div> */}
+          <ScrollToBottom>
+            {messages.map((message, i) => (
+              <div key={i}>
+                {" "}
+                <Message message={message} name={name} />{" "}
+              </div>
+            ))}
+          </ScrollToBottom>
         </div>
+
         <div className="titleBar">
-          <h2>Apollo 13</h2>{" "}
+          <h2>{room}</h2>{" "}
         </div>
-        <div className="messages"></div>
+        {/* <div className="messages"></div> */}
         <div className="chatBar">
-          <div className="chatInput">
+          <form className="chatInput">
             <input
+              className="input"
               value={message}
               onChange={(event) => setMessage(event.target.value)}
               onKeyPress={(event) =>
@@ -79,8 +93,8 @@ function Chat() {
               }
               type="text"
             />
-            <button>Send</button>
-          </div>
+            <button onClick={(event) => sendMessage(event)}>Send</button>
+          </form>
         </div>
       </div>
     </div>
