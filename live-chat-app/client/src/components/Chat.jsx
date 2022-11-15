@@ -15,7 +15,7 @@ function Chat() {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("");
 
-  const ENDPOINT = "localhost:5000";
+  const ENDPOINT = "https://spacechat-server.up.railway.app/";
 
   useEffect(() => {
     const { name, room } = queryString.parse(window.location.search);
