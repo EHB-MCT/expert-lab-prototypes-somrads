@@ -1,0 +1,9 @@
+// This applies from 0px to 600px
+body {
+}
+
+// This applies from 600px onwards
+@media (min-width: 600px) {
+  body {
+  }
+}
