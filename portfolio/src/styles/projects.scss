@@ -1,0 +1,55 @@
+.Projects {
+  margin-top: 8%;
+  h1 {
+    font-family: "El Messiri", sans-serif;
+    font-size: 2.5rem;
+  }
+  .project-titles {
+    ul {
+      display: flex;
+      font-family: "Raleway", sans-serif;
+      font-size: 2.3rem;
+      margin: 6% 0%;
+      justify-content: space-evenly;
+    }
+    .project-sections {
+      .project-item {
+        margin-top: 10%;
+        h1 {
+          font-family: "Raleway", sans-serif;
+          font-weight: 500;
+          font-size: 2.35rem;
+          margin: 1% 0%;
+          margin-bottom: 5%;
+        }
+        .thumbnail {
+          width: 100%;
+        }
+        p {
+          font-family: "Raleway", sans-serif;
+          font-weight: 300;
+          line-height: 200%;
+          font-size: 0.9rem;
+        }
+        button {
+          display: flex;
+          margin-top: 4%;
+          border: none;
+          font-family: "Raleway", sans-serif;
+          font-weight: 600;
+          background-color: #d7d6d4;
+          img {
+            padding-left: 10px;
+          }
+        }
+        
+      }
+   
+    }
+    .line, .line2{
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

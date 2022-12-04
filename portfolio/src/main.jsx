@@ -11,9 +11,9 @@ import "./styles/main.scss";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Nav />
-    {/* <Hero />
+    <Hero />
     <About />
     <Projects />
-    <Contact />  */}
+    <Contact />
   </React.StrictMode>
 );

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import MenuToggle from "./menuToggle";
 import ResumeButton from "./Resume";
-import Line from "../../assets/lines/line-nav.svg";
+import Line from "../../assets/lines/line-left.svg";
 
 const NavLinksContainer = styled.div`
   height: 100%;
@@ -20,7 +20,7 @@ const LinksWrapper = styled.ul`
   width: 100%;
   flex-direction: column;
   position: fixed;
-  top: 65px;
+  top: 58px;
   left: 0;
 `;
 

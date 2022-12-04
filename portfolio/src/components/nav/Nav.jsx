@@ -11,7 +11,7 @@ const NavBarContainer = styled.div`
   height: 60px;
   display: flex;
   align-items: center;
-  padding: .5em 2em;
+  padding: .5em .5em;
 `;
 
 const LeftSection = styled.div`

@@ -10,9 +10,9 @@ const ResumeButton = styled.button`
   border: 0;
   outline: 0;
   padding: 8px 1em;
-  color: #222;
+  color: black;
   font-family: "Raleway", sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   background-color: transparent;
   border: 3px solid #000000;
@@ -22,9 +22,6 @@ const ResumeButton = styled.button`
     color: #d7d6d4;
     border: 3.5px solid #000000;
     background-color: #bd3656;
-  }
-  &:not(:last-of-type) {
-    margin-right: 7px;
   }
 `;
 
