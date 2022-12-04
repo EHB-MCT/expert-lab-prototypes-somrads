@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/projects.scss";
 import Line2 from "../assets/lines/line-projects-web.svg";
 import Line from "../assets/lines/line-projects.svg";
+import Line3 from "../assets/lines/line-left-short.svg";
 import Lapaz from "../assets/thumbnails/lapaz.svg";
 import Spacechat from "../assets/thumbnails/spacechat.svg";
 import Twitch from "../assets/thumbnails/twitch.svg";
@@ -59,6 +60,9 @@ function Projects() {
                 <img src={Arrow} alt="arrow" />
               </button>
             </div>
+          </div>
+          <div className="line-end">
+            <img src={Line3} alt="line" />
           </div>
         </div>
       </div>

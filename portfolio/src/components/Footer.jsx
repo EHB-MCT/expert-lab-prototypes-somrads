@@ -1,8 +1,13 @@
 import React from 'react'
+import "../styles/footer.scss"
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div className='Footer'>
+      <div className='footer-container'>
+        <p>designed & build by me</p>
+      </div>
+    </div>
   )
 }
 
