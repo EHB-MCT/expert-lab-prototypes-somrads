@@ -33,7 +33,7 @@ const Link = styled.a`
 
 function NavLinks(props) {
   return (
-    <NavLinksContainer>
+    <NavLinksContainer data-scroll-container>
       <LinksWrapper>
         <LinkItem>
           <Link href="#">1. About Me</Link>

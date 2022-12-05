@@ -27,10 +27,10 @@ const RightSection = styled.div`
   display: flex;
 `;
 
-function Nav(props) {
+function Nav() {
   const isMobile = useMediaQuery({ maxWidth: DeviceSizes.mobile });
   return (
-    <NavBarContainer>
+    <NavBarContainer data-scroll-container>
       <LeftSection>
         <img src={Logo} alt="logo" />
       </LeftSection>

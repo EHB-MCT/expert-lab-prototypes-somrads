@@ -10,7 +10,7 @@ import Arrow from "../assets/lines/arrow.svg";
 
 function Projects() {
   return (
-    <div className="Projects">
+    <div className="Projects" data-scroll-container>
       <div className="project-titles">
         <h1>2. Projects</h1>
         <div className="line">

@@ -6,7 +6,7 @@ import "../styles/contact.scss";
 
 function Contact() {
   return (
-    <div className="Contact">
+    <div className="Contact" data-scroll-container>
       <h1>3. Contact</h1>
       <div className="line">
         <img src={Line} alt="line" />

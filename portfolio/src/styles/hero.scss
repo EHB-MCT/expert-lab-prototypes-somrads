@@ -17,63 +17,64 @@ a {
 ul {
   list-style: none;
 }
-
-.hero-section {
-  span {
-    color: $accentColor;
-  }
-  h1 {
-    font-family: "El Messiri", sans-serif;
-    font-weight: bold;
-    font-size: 3.6rem;
-  }
-  .links-title,
-  .rechts-title {
-    .title {
-      height: 60px;
+.Hero {
+  .hero-section {
+    span {
+      color: $accentColor;
     }
-  }
-
-  .rechts-title {
-    margin-top: -8%;
-    margin-left: 30%;
-    .title-left {
-      margin-left: 12%;
+    h1 {
+      font-family: "El Messiri", sans-serif;
+      font-weight: bold;
+      font-size: 3.6rem;
     }
-  }
-  .hero-content {
-    margin-right: 5%;
-    p {
-      font-family: "Raleway", sans-serif;
-      font-size: 0.9375rem;
-      font-weight: 600;
-      line-height: 150%;
-    }
-
-    .button {
-      margin-top: 4%;
-      display: flex;
-      button {
-        border: 0;
-        outline: 0;
-        padding: 8px 1em;
-        color: black;
-        font-family: "Raleway", sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        background-color: transparent;
-        border: 3px solid #000000;
-        transition: all 240ms ease-in-out;
-        cursor: pointer;
-        &:hover {
-          color: $backgroundColor;
-          border: 3.5px solid #000000;
-          background-color: $accentColor;
-        }
+    .links-title,
+    .rechts-title {
+      .title {
+        height: 60px;
       }
     }
-    .line{
-      margin: 8% 0%;
+
+    .rechts-title {
+      margin-top: -8%;
+      margin-left: 30%;
+      .title-left {
+        margin-left: 12%;
+      }
+    }
+    .hero-content {
+      margin-right: 5%;
+      p {
+        font-family: "Raleway", sans-serif;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        line-height: 150%;
+      }
+
+      .button {
+        margin-top: 4%;
+        display: flex;
+        button {
+          border: 0;
+          outline: 0;
+          padding: 8px 1em;
+          color: black;
+          font-family: "Raleway", sans-serif;
+          font-size: 12px;
+          font-weight: 600;
+          background-color: transparent;
+          border: 3px solid #000000;
+          transition: all 240ms ease-in-out;
+          cursor: pointer;
+          &:hover {
+            color: $backgroundColor;
+            border: 3.5px solid #000000;
+            background-color: $accentColor;
+          }
+        }
+      }
+      .line {
+        margin: 8% 0%;
+      }
     }
   }
 }
