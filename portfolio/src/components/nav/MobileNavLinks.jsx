@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import MenuToggle from "./menuToggle";
 import ResumeButton from "./Resume";
-import Line from "../../assets/lines/line-left.svg";
+import Line from "../../assets/lines/line-left.svg"
 import gsap from "gsap";
 
 const NavLinksContainer = styled.div`
