@@ -1,30 +1,27 @@
 import React from "react";
 import { useMediaQuery } from "./hooks/useMediaQuery";
 import "../styles/about.scss";
-// import LineMobile from "../assets/lines/line-about.svg"
-// import LineDesktop from "../assets/lines/desktop/line-about.svg";
+import LineMobile from "../assets/lines/line-about.svg";
+import LineDesktop from "../assets/lines/desktop/line-about.svg";
 
 function About() {
-  // const mediaWidth = window.matchMedia('(max-width: 600px)');
-  // const width = useMediaQuery(mediaWidth);
+  const width = useMediaQuery();
 
-  // let Line;
-  // if (width.matches) {
-  //   // Show the mobile image for widths <= 600
-  //   Line = LineMobile;
-  // } else {
-  //   // Show the desktop image for widths > 600
-  //   Line = LineDesktop;
-  // }
+  let Line;
+  if (width <= 600) {
+    // Show the mobile image for widths <= 600
+    Line = LineMobile;
+  } else {
+    // Show the desktop image for widths > 600
+    Line = LineDesktop;
+  }
 
   return (
     <div className="About">
       <div className="content-right">
         <h1>1. About Me</h1>
-        
-        <div className="line">
-          {/* <img src={Line} alt="line" /> */}
-        </div>
+
+        <div className="line"><img src={Line} alt="line" /></div>
         <div className="about-section">
           <p>
             Hello! My name is Somrad and I am a student that studies in Erasmus

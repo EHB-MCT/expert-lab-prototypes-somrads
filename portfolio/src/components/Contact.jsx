@@ -1,17 +1,30 @@
 import React from "react";
+import { useMediaQuery } from "./hooks/useMediaQuery";
 import LinkedIn from "../assets/thumbnails/linkedin.svg";
 import Github from "../assets/thumbnails/github.svg";
-// import Line from "../assets/lines/line-about.svg";
+import LineMobile from "../assets/lines/line-contact.svg";
+import LineDesktop from "../assets/lines/desktop/line-contact.svg";
 import "../styles/contact.scss";
 
 function Contact() {
+  const width = useMediaQuery();
+
+  let Line;
+  if (width <= 600) {
+    // Show the mobile image for widths <= 600
+    Line = LineMobile;
+  } else {
+    // Show the desktop image for widths > 600
+    Line = LineDesktop;
+  }
+
   return (
     <div className="Contact" data-scroll-container>
       <div className="main-content">
         <div className="title">
           <h1>3. Contact</h1>
         </div>
-        <div className="line">{/* <img src={Line} alt="line" /> */}</div>
+        <div className="line"><img src={Line} alt="line" /></div>
         <div className="content">
           <h2>somradsharma@yahoo.com</h2>
           <div className="images">
