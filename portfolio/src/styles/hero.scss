@@ -81,4 +81,50 @@ ul {
 
 /* Responsiveness */
 @media (min-width: 768px) {
+  .Hero {
+    .hero-section {
+      h1 {
+        font-family: "El Messiri", sans-serif;
+        font-weight: bold;
+        font-size: 11rem;
+      }
+      .links-title,
+      .rechts-title {
+        .title {
+          height: 150px;
+        }
+      }
+
+      .rechts-title {
+        margin-top: -4%;
+        margin-left: 50%;
+        .title-left {
+          margin-left: 15%;
+        }
+      }
+      .hero-content {
+        margin-top: -3%;
+        width: 700px;
+        p {
+          font-size: 1.3rem;
+        }
+
+        .button {
+          margin-top: 4%;
+          display: flex;
+          button {
+            font-size: 15px;
+            font-weight: 600;
+          }
+        }
+        .line {
+          img {
+            width: 600px;
+            height: 20px;
+          }
+          margin: 8% 0%;
+        }
+      }
+    }
+  }
 }

@@ -10,12 +10,12 @@ import Footer from "./components/Footer";
 import "./styles/main.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  <>
     <Nav />
     <Hero />
     <About />
     <Projects />
     <Contact />
     <Footer />
-  </React.StrictMode>
+  </>
 );

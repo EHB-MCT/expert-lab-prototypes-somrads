@@ -13,3 +13,13 @@
     background-color: #c04a66;
   }
 }
+
+@media (min-width: 768px) {
+  .Footer {
+    .footer-container {
+      padding: 1%;
+      font-size: .9rem;
+    }
+  }
+
+}

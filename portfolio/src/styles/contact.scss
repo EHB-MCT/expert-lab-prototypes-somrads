@@ -19,3 +19,29 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .Contact {
+    .title {
+      margin: 2% 0%;
+    }
+    .content {
+      margin-top: 8%;
+    }
+    h1 {
+      font-size: 5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    .line {
+      margin-top: -5%;
+    }
+    .images {
+      img {
+        width: 120px;
+        padding-left: 5%;
+      }
+    }
+  }
+}

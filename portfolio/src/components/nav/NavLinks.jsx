@@ -1,4 +1,4 @@
-import React from "react";
+import Reactw from "react";
 import styled from "styled-components";
 
 const NavLinksContainer = styled.div`
@@ -31,9 +31,10 @@ const Link = styled.a`
   padding: 0 1.1em;
 `;
 
-function NavLinks(props) {
+
+function NavLinks() {
   return (
-    <NavLinksContainer data-scroll-container>
+    <NavLinksContainer>
       <LinksWrapper>
         <LinkItem>
           <Link href="#">1. About Me</Link>

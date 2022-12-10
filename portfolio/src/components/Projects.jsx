@@ -10,61 +10,86 @@ import Arrow from "../assets/lines/arrow.svg";
 
 function Projects() {
   return (
-    <div className="Projects" data-scroll-container>
+    <div className="Projects">
       <div className="project-titles">
         <h1>2. Projects</h1>
-        <div className="line">
+        <div className="project-options">
+          {/* <div className="line">
           <img src={Line} alt="line" />
+        </div> */}
+          <ul>
+            <li>Web</li>
+            <li>Design</li>
+          </ul>
         </div>
-        <ul>
-          <li>Web</li>
-          <li>Design</li>
-        </ul>
-        <div className="line2">
+        {/* <div className="line2">
           <img src={Line2} alt="line" />
-        </div>
+        </div> */}
         <div className="project-sections">
           <div className="project-item">
-            <h1>Café Website</h1>
-            <img src={Lapaz} alt="lapaz" className="thumbnail" />
-            <p>A website that i designed and build for a café in Leuven.</p>
-            <div className="learn-more">
-              <button>
-                Learn More
-                <img src={Arrow} alt="arrow" />
-              </button>
+            <div className="spacer">
+              <div className="content-projects">
+                <div className="learn-more">
+                  <button>
+                    Learn More
+                    <img src={Arrow} alt="arrow" />
+                  </button>
+                </div>
+                <p>
+                  {" "}
+                  A website that i designed and build for a café in <br />{" "}
+                  Leuven.
+                </p>
+                <h1>Café Website</h1>
+              </div>
+              <img src={Lapaz} alt="lapaz" className="thumbnail" />
             </div>
           </div>
 
           <div className="project-item">
-            <h1>Space Chat</h1>
-            <img src={Spacechat} alt="spacechat" className="thumbnail" />
-            <p>
-              A live chat app designed for space lovers that prefers animosity.
-            </p>
-            <div className="learn-more">
-              <button>
-                Learn More
-                <img src={Arrow} alt="arrow" />
-              </button>
+            <div className="spacer">
+              <div className="content-projects">
+                <div className="learn-more">
+                  <button>
+                    Learn More
+                    <img src={Arrow} alt="arrow" />
+                  </button>
+                </div>
+                <p>
+                  {" "}
+                  A live chat app designed and build for space lovers <br />{" "}
+                  that prefers animosity.
+                </p>
+                <h1>Space Chat</h1>
+              </div>
+              <img src={Spacechat} alt="spacechat" className="thumbnail" />
             </div>
           </div>
 
           <div className="project-item">
-            <h1>Twitch Redesign</h1>
-            <img src={Twitch} alt="twitch" className="thumbnail" />
-            <p>The twitch app that i fully redesigned and made with angular.</p>
-            <div className="learn-more">
-              <button>
-                Learn More
-                <img src={Arrow} alt="arrow" />
-              </button>
+            <div className="spacer">
+              <div className="content-projects">
+                <div className="learn-more">
+                  <button>
+                    Learn More
+                    <img src={Arrow} alt="arrow" />
+                  </button>
+                </div>
+                <p>
+                  {" "}
+                  The twitch app that i fully redesigned and remade with
+                 <br /> angular.
+                </p>
+                <h1>Space Chat</h1>
+              </div>
+              <img src={Twitch} alt="twitch" className="thumbnail" />
             </div>
-          </div>
-          <div className="line-end">
-            <img src={Line3} alt="line" />
           </div>
         </div>
+      </div>
+
+      <div className="line-end">
+        {/* <img src={Line3} alt="line" /> */}
       </div>
     </div>
   );

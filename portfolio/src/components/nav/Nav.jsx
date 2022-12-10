@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import Logo from "../../assets/logo.svg";
 import styled from "styled-components";
 import NavLinks from "./NavLinks";
 import DeviceSizes from "./index";
 import MobileNavLinks from "./MobileNavLinks";
+import "../../styles/nav.scss"
 
 const NavBarContainer = styled.div`
   width: 100%,
@@ -27,12 +28,16 @@ const RightSection = styled.div`
   display: flex;
 `;
 
+const ImageSection = styled.img`
+  with: 80px;
+`;
+
 function Nav() {
   const isMobile = useMediaQuery({ maxWidth: DeviceSizes.mobile });
   return (
-    <NavBarContainer data-scroll-container>
+    <NavBarContainer>
       <LeftSection>
-        <img src={Logo} alt="logo" />
+          <img src={Logo} alt="logo" />
       </LeftSection>
       <MiddleSection></MiddleSection>
       <RightSection>

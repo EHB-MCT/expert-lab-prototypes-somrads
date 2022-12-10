@@ -6,7 +6,7 @@
   }
   .content-right {
     text-align: right;
-    .line{
+    .line {
       margin-top: -5%;
       margin-right: 1%;
       margin-bottom: 3%;
@@ -33,6 +33,41 @@
       margin-top: 2%;
       ul {
         list-style: outside;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .About {
+    margin-top: 5%;
+    h1 {
+      font-size: 5rem;
+    }
+    .content-right {
+      text-align: right;
+      .line {
+        margin-top: -1%;
+        margin-right: 0%;
+      }
+      .about-section {
+        float: right;
+        text-align: left;
+        font-size: 1.2rem;
+        p {
+          width: 700px;
+        }
+      }
+    }
+    .technologies {
+      display: flex;
+      margin-top: 0%;
+      font-size: 1.2rem;
+      flex-direction: column;
+      .list {
+        font-weight: 600;
+        margin-top: 4%;
+        margin-top: 2%;
+        margin-left: -29%;
       }
     }
   }

@@ -1,14 +1,23 @@
 import React from "react";
 import "../styles/about.scss";
-import Line from "../assets/lines/line-about.svg";
+import Line from "../assets/lines/web/line-about2.svg";
+import LineMobile from "../assets/lines/line-about.svg";
 
 function About() {
+  const isMobile = window.matchMedia("(max-width: 700px)").matches;
   return (
-    <div className="About" data-scroll-container>
+    <div className="About">
       <div className="content-right">
         <h1>1. About Me</h1>
+        
         <div className="line">
-          <img src={Line} alt="line" />
+          {isMobile ? (
+            <img src={Line} alt="line" />
+          ) : (
+            <img src={LineMobile} alt="test" />
+          )}
+
+          {/* <img src={Line} alt="line" /> */}
         </div>
         <div className="about-section">
           <p>
