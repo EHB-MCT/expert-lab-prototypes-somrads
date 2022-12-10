@@ -1,22 +1,28 @@
 import React from "react";
+import { useMediaQuery } from "./hooks/useMediaQuery";
 import "../styles/about.scss";
-// import Line from "../assets/lines/web/line-about2.svg";
-// import LineMobile from "../assets/lines/line-about.svg";
+// import LineMobile from "../assets/lines/line-about.svg"
+// import LineDesktop from "../assets/lines/desktop/line-about.svg";
 
 function About() {
-  const isMobile = window.matchMedia("(max-width: 700px)").matches;
+  // const mediaWidth = window.matchMedia('(max-width: 600px)');
+  // const width = useMediaQuery(mediaWidth);
+
+  // let Line;
+  // if (width.matches) {
+  //   // Show the mobile image for widths <= 600
+  //   Line = LineMobile;
+  // } else {
+  //   // Show the desktop image for widths > 600
+  //   Line = LineDesktop;
+  // }
+
   return (
     <div className="About">
       <div className="content-right">
         <h1>1. About Me</h1>
         
         <div className="line">
-          {/* {isMobile ? (
-            <img src={Line} alt="line" />
-          ) : (
-            <img src={LineMobile} alt="test" />
-          )} */}
-
           {/* <img src={Line} alt="line" /> */}
         </div>
         <div className="about-section">

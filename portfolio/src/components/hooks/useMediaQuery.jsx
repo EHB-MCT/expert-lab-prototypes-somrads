@@ -1,27 +1,25 @@
-// File: useMediaQuery.js
-import { useRef, useEffect, useState } from "react";
+import{ useState, useEffect, useRef } from "react";
 
-export const useMediaQuery = (mediaWidth) => {
-  const [width, setWidth] = useState(mediaWidth);
+export const useMediaQuery = () => {
+  const [width, setWidth] = useState(window.innerWidth);
 
-  // Use the useRef hook to track the previous screen width
+  // To track the previous screen width
   const prevWidth = useRef(width);
 
-  const handleResize = () => {
-    setWidth(mediaWidth);
-
-    // Check if the width has changed and only refresh the page if it has
-    if (prevWidth.current !== width) {
-      prevWidth.current = width;
-      window.location.reload();
-    }
-  };
-
-  // Use the useEffect hook to update the width when the window is resized
+  // To update the width when the window is resized
   useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+
+      // Check if the width has changed and only refresh the page if it has
+      if (prevWidth.current !== width) {
+        prevWidth.current = width;
+        window.location.reload();
+      }
+    };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [handleResize]);
+  }, [width]);
 
   return width;
 };

@@ -1,16 +1,15 @@
-import React, { useRef, useEffect } from "react";
-import { useMediaQuery } from "./hooks/useMediaQuery";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 import "../styles/hero.scss";
 import LineMobile from "../assets/lines/line-hero.svg";
+import { useMediaQuery } from "./hooks/useMediaQuery";
 import LineDesktop from "../assets/lines/desktop/line-hero.svg";
 import gsap from "gsap";
 
 function Hero() {
-  const mediaWidth = window.matchMedia('(max-width: 600px)');
-  const width = useMediaQuery(mediaWidth);
-
+  const width = useMediaQuery();
+  
   let Line;
-  if (width.matches) {
+  if (width <= 600) {
     // Show the mobile image for widths <= 600
     Line = LineMobile;
   } else {
