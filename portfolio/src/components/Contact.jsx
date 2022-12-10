@@ -1,7 +1,7 @@
 import React from "react";
 import LinkedIn from "../assets/thumbnails/linkedin.svg";
 import Github from "../assets/thumbnails/github.svg";
-import Line from "../assets/lines/line-about.svg";
+// import Line from "../assets/lines/line-about.svg";
 import "../styles/contact.scss";
 
 function Contact() {

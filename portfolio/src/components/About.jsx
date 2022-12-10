@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/about.scss";
-import Line from "../assets/lines/web/line-about2.svg";
-import LineMobile from "../assets/lines/line-about.svg";
+// import Line from "../assets/lines/web/line-about2.svg";
+// import LineMobile from "../assets/lines/line-about.svg";
 
 function About() {
   const isMobile = window.matchMedia("(max-width: 700px)").matches;
@@ -11,11 +11,11 @@ function About() {
         <h1>1. About Me</h1>
         
         <div className="line">
-          {isMobile ? (
+          {/* {isMobile ? (
             <img src={Line} alt="line" />
           ) : (
             <img src={LineMobile} alt="test" />
-          )}
+          )} */}
 
           {/* <img src={Line} alt="line" /> */}
         </div>

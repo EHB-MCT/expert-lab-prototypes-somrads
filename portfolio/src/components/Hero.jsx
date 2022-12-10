@@ -1,11 +1,22 @@
 import React, { useRef, useEffect } from "react";
+import { useMediaQuery } from "./hooks/useMediaQuery";
 import "../styles/hero.scss";
-import Line from "../assets/lines/web/line-about.svg";
+import LineMobile from "../assets/lines/line-hero.svg";
+import LineDesktop from "../assets/lines/desktop/line-hero.svg";
 import gsap from "gsap";
 
 function Hero() {
-  const isMobile = window.matchMedia("(max-width: 700px)").matches;
+  const mediaWidth = window.matchMedia('(max-width: 600px)');
+  const width = useMediaQuery(mediaWidth);
 
+  let Line;
+  if (width.matches) {
+    // Show the mobile image for widths <= 600
+    Line = LineMobile;
+  } else {
+    // Show the desktop image for widths > 600
+    Line = LineDesktop;
+  }
   let text1 = useRef(null);
   let text2 = useRef(null);
   let text3 = useRef(null);
@@ -67,9 +78,9 @@ function Hero() {
           <div className="button" ref={(el) => (button1 = el)}>
             <button>RESUME</button>
           </div>
-          {/* <div className="line">
-            <img src={Line} alt="" />
-          </div> */}
+          <div className="line">
+            <img src={Line} alt="line-svg" />
+          </div>
         </div>
       </div>
     </div>
