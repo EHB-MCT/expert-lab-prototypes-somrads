@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/projects.scss";
 import { useMediaQuery } from "./hooks/useMediaQuery";
 import Lapaz from "../assets/thumbnails/lapaz.svg";
@@ -13,6 +13,7 @@ import LineMobile3 from "../assets/lines/line-projects-bottom.svg";
 import LineDesktop3 from "../assets/lines/desktop/line-projects-bottom.svg";
 
 function Projects() {
+
   const width = useMediaQuery();
 
   let Line;
@@ -46,76 +47,77 @@ function Projects() {
     <div className="Projects">
       <div className="project-titles">
         <h1>2. Projects</h1>
-        <div className="project-options">
-          <div className="line">
-            <img src={Line} alt="line" />
-          </div>
-          <ul>
-            <li>Web</li>
-            <li>Design</li>
-          </ul>
-        </div>
-        <div className="line2">
-          <img src={Line2} alt="line" />
-        </div>
-        <div className="project-sections">
-          <div className="project-item">
-            <div className="spacer">
-              <div className="content-projects">
-                <div className="learn-more">
-                  <button>
-                    Learn More
-                    <img src={Arrow} alt="arrow" />
-                  </button>
-                </div>
-                <p>
-                  {" "}
-                  A website that i designed and build for a café in <br />{" "}
-                  Leuven.
-                </p>
-                <h1>Café Website</h1>
-              </div>
-              <img src={Lapaz} alt="lapaz" className="thumbnail" />
+        <div className="projects web">
+          <div className="project-options">
+            <div className="line">
+              <img src={Line} alt="line" />
             </div>
+            <ul>
+              <li>Web</li>
+            </ul>
           </div>
-
-          <div className="project-item">
-            <div className="spacer">
-              <div className="content-projects">
-                <div className="learn-more">
-                  <button>
-                    Learn More
-                    <img src={Arrow} alt="arrow" />
-                  </button>
+          <div className="line2">
+            <img src={Line2} alt="line" />
+          </div>
+          <div className="project-sections">
+            <div className="project-item">
+              <div className="spacer">
+                <div className="content-projects">
+                  <div className="learn-more">
+                    <button>
+                      Learn More
+                      <img src={Arrow} alt="arrow" />
+                    </button>
+                  </div>
+                  <p>
+                    {" "}
+                    A website that i designed and build for a café in <br />{" "}
+                    Leuven.
+                  </p>
+                  <h1>Café Website</h1>
                 </div>
-                <p>
-                  {" "}
-                  A live chat app designed and build for space lovers <br />{" "}
-                  that prefers animosity.
-                </p>
-                <h1>Space Chat</h1>
+                <img src={Lapaz} alt="lapaz" className="thumbnail" />
               </div>
-              <img src={Spacechat} alt="spacechat" className="thumbnail" />
             </div>
-          </div>
 
-          <div className="project-item">
-            <div className="spacer">
-              <div className="content-projects">
-                <div className="learn-more">
-                  <button>
-                    Learn More
-                    <img src={Arrow} alt="arrow" />
-                  </button>
+            <div className="project-item">
+              <div className="spacer">
+                <div className="content-projects">
+                  <div className="learn-more">
+                    <button>
+                      Learn More
+                      <img src={Arrow} alt="arrow" />
+                    </button>
+                  </div>
+                  <p>
+                    {" "}
+                    A live chat app designed and build for space lovers <br />{" "}
+                    that prefers animosity.
+                  </p>
+                  <h1>Space Chat</h1>
                 </div>
-                <p>
-                  {" "}
-                  The twitch app that i fully redesigned and remade with
-                  <br /> angular.
-                </p>
-                <h1>Twitch App</h1>
+                <img src={Spacechat} alt="spacechat" className="thumbnail" />
               </div>
-              <img src={Twitch} alt="twitch" className="thumbnail" />
+            </div>
+
+            <div className="project-item">
+              <div className="spacer">
+                <div className="content-projects">
+                  <div className="learn-more">
+                    <button>
+                      Learn More
+                      <img src={Arrow} alt="arrow" />
+                    </button>
+                  </div>
+                  <p>
+                    {" "}
+                    The twitch app that i fully redesigned and remade with
+                    <br /> angular.
+                  </p>
+                  <h1>Twitch App</h1>
+                </div>
+                <img src={Twitch} alt="twitch" className="thumbnail" />
+              </div>
             </div>
           </div>
         </div>

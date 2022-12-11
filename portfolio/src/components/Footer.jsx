@@ -3,7 +3,7 @@ import "../styles/footer.scss";
 
 function Footer() {
   return (
-    <div className="Footer" data-scroll-container>
+    <div className="Footer">
       <div className="footer-container">
         <p>designed & build by me</p>
       </div>
