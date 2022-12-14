@@ -1,3 +1,5 @@
+$accentColor: #bd3656;
+
 .Projects {
   margin-top: 15%;
   h1 {
@@ -12,6 +14,17 @@
       margin: 6% 0%;
       justify-content: space-evenly;
       cursor: pointer;
+      :hover {
+        color: $accentColor;
+      }
+      li {
+        font-weight: 300;
+      }
+      .selected {
+        font-weight: 800;
+        color: $accentColor;
+        transition: .3s ease-out;
+      }
     }
     .project-sections {
       .content-projects {
@@ -55,9 +68,8 @@
         width: 100%;
       }
     }
-    .line2{
+    .line2 {
       transform: scaleX(-1);
-
     }
   }
   .line-end {

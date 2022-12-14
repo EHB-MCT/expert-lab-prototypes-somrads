@@ -62,8 +62,18 @@ function Projects() {
               <img src={Line} alt="line" />
             </div>
             <ul>
-              <li onClick={() => handleSectionChange("web")}>Web</li>
-              <li onClick={() => handleSectionChange("design")}>Design</li>
+              <li
+                className={currentSection === "web" ? "selected" : ""}
+                onClick={() => handleSectionChange("web")}
+              >
+                Web
+              </li>
+              <li
+                className={currentSection === "design" ? "selected" : ""}
+                onClick={() => handleSectionChange("design")}
+              >
+                Design
+              </li>
             </ul>
           </div>
           <div className="line2">
