@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/projects.scss";
+import gsap from "gsap";
 import { useMediaQuery } from "./hooks/useMediaQuery";
 import Lapaz from "../assets/thumbnails/lapaz.svg";
 import Spacechat from "../assets/thumbnails/spacechat.svg";
@@ -7,14 +8,32 @@ import Twitch from "../assets/thumbnails/twitch.svg";
 import Arrow from "../assets/lines/arrow.svg";
 import LineMobile from "../assets/lines/line-projects.svg";
 import LineDesktop from "../assets/lines/desktop/line-projects.svg";
-import LineMobile2 from "../assets/lines/line-projects-web.svg";
-import LineDesktop2 from "../assets/lines/desktop/line-projects-web.svg";
 import LineMobile3 from "../assets/lines/line-projects-bottom.svg";
 import LineDesktop3 from "../assets/lines/desktop/line-projects-bottom.svg";
 
 function Projects() {
   const width = useMediaQuery();
   const [currentSection, setCurrentSection] = useState("web");
+
+  const handleSectionChange = (newSection) => {
+    gsap.to(".project-sections", {
+      duration: 0.5,
+      x: "-100%",
+      opacity: 0,
+      stagger: 0.25,
+      onComplete: () => {
+        setCurrentSection(newSection);
+      },
+    });
+  };
+
+  useEffect(() => {
+    gsap.from(".project-sections", {
+      x: "100%",
+      duration: 1,
+      opacity: 1,
+    });
+  }, [currentSection]);
 
   let Line;
   if (width <= 600) {
@@ -24,16 +43,6 @@ function Projects() {
     // Show the desktop image for widths > 600
     Line = LineDesktop;
   }
-
-  let Line2;
-  if (width <= 600) {
-    // Show the mobile image for widths <= 600
-    Line2 = LineMobile2;
-  } else {
-    // Show the desktop image for widths > 600
-    Line2 = LineDesktop2;
-  }
-
   let Line3;
   if (width <= 600) {
     // Show the mobile image for widths <= 600
@@ -53,16 +62,15 @@ function Projects() {
               <img src={Line} alt="line" />
             </div>
             <ul>
-              <li onClick={() => setCurrentSection("web")}>Web</li> 
-              <li onClick={() => setCurrentSection("design")}>Design</li> 
-
+              <li onClick={() => handleSectionChange("web")}>Web</li>
+              <li onClick={() => handleSectionChange("design")}>Design</li>
             </ul>
           </div>
           <div className="line2">
-            <img src={Line2} alt="line" />
+            <img src={Line} alt="line" />
           </div>
 
-          {currentSection === "web" && ( // Only render the web projects if the current section is 'web'
+          {currentSection === "web" && (
             <div className="project-sections">
               <div className="project-item">
                 <div className="spacer">
@@ -128,7 +136,6 @@ function Projects() {
 
           {currentSection === "design" && (
             <div className="project-sections">
-
               <div className="project-item">
                 <div className="spacer">
                   <div className="content-projects">
@@ -188,7 +195,6 @@ function Projects() {
                   <img src={Twitch} alt="twitch" className="thumbnail" />
                 </div>
               </div>
-
             </div>
           )}
         </div>
