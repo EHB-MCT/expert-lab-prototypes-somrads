@@ -1,8 +1,47 @@
-    .cursor {
-      width: 40px;
-      height: 40px;
-      border: 2px solid #121212;
-      border-radius: 100%;
-      position: fixed;
-      transform: translate(-50%, -50%);
+$accentColor: #bd3656;
+
+.cursor {
+  visibility: none;
+}
+
+@media (min-width: 768px) {
+  html,
+  body {
+    cursor: none;
   }
+  html *,
+  body * {
+    cursor: none;
+  }
+
+  .cursor {
+    z-index: 1;
+    pointer-events: none;
+    visibility: visible;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    transition: all 100ms ease;
+    transition-property: opacity, background-color, transform;
+    pointer-events: none;
+  }
+
+  .cursor--hidden {
+    opacity: 0;
+  }
+
+  .cursor--click {
+    border: 2px solid #c30c3793; ;
+    transform: translate(-50%, -50%) scale(0.5);
+    background-color: $accentColor;
+  }
+
+  .cursor--hover {
+    border: 2px solid #511f2b93; ;
+    transform: translate(-50%, -50%) scale(1.25);
+    background-color: #bd36567c;
+  }
+}
