@@ -46,10 +46,16 @@
     .images {
       display: flex;
       margin-top: -8%;
-      img {
-        margin-top: -1%;
-        width: 130px;
-        padding-left: 5%;
+      a {
+        img {
+          margin-top: -25%;
+          width: 170px;
+          padding-left: 80px;
+          transition: transform 0.2s ease-in-out;
+        }
+        img:hover {
+          transform: translateY(-10px);
+        }
       }
     }
   }

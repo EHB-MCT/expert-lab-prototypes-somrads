@@ -49,10 +49,20 @@ function Contact() {
           <img src={Line} alt="line" />
         </div>
         <div className="content">
-          <h2>somradsharma@yahoo.com</h2>
+          <a href="mailto:somradsharma@yahoo.com">
+            {" "}
+            <h2>somradsharma@yahoo.com</h2>
+          </a>
+
           <div className="images">
-            <img src={LinkedIn} alt="linkedIn" />
-            <img src={Github} alt="github" />
+            <a href="linkedin.com/in/somradsharma" target="_blank">
+              {" "}
+              <img src={LinkedIn} alt="linkedIn" />
+            </a>
+
+            <a href="https://github.com/somrads" target="_blank">
+              <img src={Github} alt="github" />
+            </a>
           </div>
         </div>
       </div>
