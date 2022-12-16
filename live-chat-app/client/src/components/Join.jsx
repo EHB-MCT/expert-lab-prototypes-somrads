@@ -16,8 +16,8 @@ function Join() {
           <h2>
             Talk with your fellow space fanatics about the wonders of space.{" "}
             <br />
-            Enter your username and then enter your room name to join your <br />
-            friends or create your own room by also entering a room name.
+            Choose your username and enter a room name to create or join a room{" "}
+            <br />
           </h2>
         </div>
       </div>
