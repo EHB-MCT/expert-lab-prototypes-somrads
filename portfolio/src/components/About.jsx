@@ -1,13 +1,34 @@
 import React, { useRef, useEffect } from "react";
-import gsap from "gsap";
-import { scrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "./hooks/useMediaQuery";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import "../styles/about.scss";
 import LineMobile from "../assets/lines/line-about.svg";
 import LineDesktop from "../assets/lines/desktop/line-about.svg";
 
 function About() {
   const width = useMediaQuery();
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".About",
+      {
+        x: 100,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        duration: 2,
+        ease: "ease-in-out",
+        opacity: 1,
+        delay: 1,
+        scrollTrigger: {
+          trigger: ".About",
+        },
+      }
+    );
+  }, []);
   let Line;
   if (width <= 600) {
     // Show the mobile image for widths <= 600
@@ -17,34 +38,8 @@ function About() {
     Line = LineDesktop;
   }
 
-  const aboutRef = useRef(null); 
-
-  useEffect(() => {
-    gsap.registerPlugin(scrollTrigger);
-
-    scrollTrigger.create({
-      trigger: aboutRef.current, 
-      start: "top top", 
-      end: "bottom bottom", 
-      onEnter: () => {
-    
-        gsap.to(aboutRef.current, {
-          opacity: 1,
-          duration: 1,
-        });
-      },
-      onLeave: () => {
-
-        gsap.to(aboutRef.current, {
-          opacity: 0,
-          duration: 1,
-        });
-      },
-    });
-  }, []); 
-
   return (
-    <div className="About" ref={aboutRef}>
+    <div className="About">
       <div className="content-right">
         <h1 id="title">1. About Me</h1>
         <div className="line">

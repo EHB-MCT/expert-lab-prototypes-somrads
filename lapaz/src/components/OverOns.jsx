@@ -1,5 +1,5 @@
 import "../style/style.scss";
-import { motion, Variants} from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 function OverOns() {
   const titleAnimate = {
@@ -40,7 +40,7 @@ function OverOns() {
         <motion.div variants={textAnimate} className="button-container">
           <motion.button
             whileHover={{ scale: 1.2 }}
-            transition = {{type: "spring", bounce: .4, duration: 1}}
+            transition={{ type: "spring", bounce: 0.4, duration: 1 }}
             whileTap={{
               scale: 1.3,
             }}

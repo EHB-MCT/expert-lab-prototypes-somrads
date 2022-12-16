@@ -17,6 +17,7 @@ function Projects() {
   const width = useMediaQuery();
   const [currentSection, setCurrentSection] = useState("web");
 
+
   const handleSectionChange = (newSection) => {
     gsap.to(".project-sections", {
       duration: 0.5,
@@ -36,6 +37,26 @@ function Projects() {
       opacity: 1,
     });
   }, [currentSection]);
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".Projects",
+      {
+        x: -100,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        duration: 2,
+        ease: "ease-in-out",
+        opacity: 1,
+        delay: 1,
+        scrollTrigger: {
+          trigger: ".Projects",
+        },
+      }
+    );
+  }, []);
 
   let Line;
   if (width <= 600) {
