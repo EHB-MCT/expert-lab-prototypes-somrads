@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { scrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "./hooks/useMediaQuery";
 import "../styles/about.scss";
 import LineMobile from "../assets/lines/line-about.svg";
@@ -6,7 +8,6 @@ import LineDesktop from "../assets/lines/desktop/line-about.svg";
 
 function About() {
   const width = useMediaQuery();
-
   let Line;
   if (width <= 600) {
     // Show the mobile image for widths <= 600
@@ -16,12 +17,39 @@ function About() {
     Line = LineDesktop;
   }
 
-  return (
-    <div className="About">
-      <div className="content-right">
-        <h1>1. About Me</h1>
+  const aboutRef = useRef(null); 
 
-        <div className="line"><img src={Line} alt="line" /></div>
+  useEffect(() => {
+    gsap.registerPlugin(scrollTrigger);
+
+    scrollTrigger.create({
+      trigger: aboutRef.current, 
+      start: "top top", 
+      end: "bottom bottom", 
+      onEnter: () => {
+    
+        gsap.to(aboutRef.current, {
+          opacity: 1,
+          duration: 1,
+        });
+      },
+      onLeave: () => {
+
+        gsap.to(aboutRef.current, {
+          opacity: 0,
+          duration: 1,
+        });
+      },
+    });
+  }, []); 
+
+  return (
+    <div className="About" ref={aboutRef}>
+      <div className="content-right">
+        <h1 id="title">1. About Me</h1>
+        <div className="line">
+          <img src={Line} alt="line" />
+        </div>
         <div className="about-section">
           <p>
             Hello! My name is Somrad and I am a student that studies in Erasmus

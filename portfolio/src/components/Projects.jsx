@@ -89,14 +89,14 @@ function Projects() {
                   <div className="content-projects">
                     <div className="learn-more">
                       <button>
-                        Learn More
+                     View Project
                         <img src={Arrow} alt="arrow" />
                       </button>
                     </div>
                     <p>
                       {" "}
                       A website that i designed and build for a café in <br />{" "}
-                      Leuven.
+                      Leuven using <span className="accent">React</span>  and <span className="accent">Framer Motion</span>.
                     </p>
                     <h1>Café Website</h1>
                   </div>
@@ -109,14 +109,14 @@ function Projects() {
                   <div className="content-projects">
                     <div className="learn-more">
                       <button>
-                        Learn More
+                      View Project
                         <img src={Arrow} alt="arrow" />
                       </button>
                     </div>
                     <p>
                       {" "}
                       A live chat app designed and build for space lovers <br />{" "}
-                      that prefers animosity.
+                      that prefers animosity using <span className="accent">React</span>  and <span className="accent">Socket.io</span>. 
                     </p>
                     <h1>Space Chat</h1>
                   </div>
@@ -129,14 +129,14 @@ function Projects() {
                   <div className="content-projects">
                     <div className="learn-more">
                       <button>
-                        Learn More
+                      View Project
                         <img src={Arrow} alt="arrow" />
                       </button>
                     </div>
                     <p>
                       {" "}
                       The twitch app that i fully redesigned and remade with
-                      <br /> angular.
+                      <br /> <span className="accent">Angular</span>.
                     </p>
                     <h1>Twitch App</h1>
                   </div>
@@ -153,14 +153,14 @@ function Projects() {
                   <div className="content-projects">
                     <div className="learn-more">
                       <button>
-                        Learn More
+                      View Project
                         <img src={Arrow} alt="arrow" />
                       </button>
                     </div>
                     <p>
                       {" "}
                       A poster that i designed to promote my group school
-                      <br /> project about The Beatles.
+                      <br /> project about The Beatles with <span className="accent">Illustrator</span>.
                     </p>
                     <h1>Beatles Poster</h1>
                   </div>
@@ -173,14 +173,14 @@ function Projects() {
                   <div className="content-projects">
                     <div className="learn-more">
                       <button>
-                        Learn More
+                      View Project
                         <img src={Arrow} alt="arrow" />
                       </button>
                     </div>
                     <p>
                       {" "}
                       A school project design that i made for for a app made for
-                      <br /> student housing.
+                      <br /> student housing with <span className="accent">Adobe XD</span>.
                     </p>
                     <h1>Near Me</h1>
                   </div>
@@ -193,14 +193,14 @@ function Projects() {
                   <div className="content-projects">
                     <div className="learn-more">
                       <button>
-                        Learn More
+                      View Project
                         <img src={Arrow} alt="arrow" />
                       </button>
                     </div>
                     <p>
                       {" "}
                       The twitch app that i fully redesigned and remade with
-                      <br /> angular.
+                      <br /> <span className="accent">Adobe XD</span>.
                     </p>
                     <h1>Twitch Redesign</h1>
                   </div>
