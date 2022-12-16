@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
-import MenuToggle from "./menuToggle";
+import MenuToggle from "./MenuToggle.jsx";
 import ResumeButton from "./Resume";
 import { BrowserRouter as Router } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
