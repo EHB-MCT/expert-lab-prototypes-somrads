@@ -5,6 +5,8 @@ import { useMediaQuery } from "./hooks/useMediaQuery";
 import Lapaz from "../assets/thumbnails/lapaz.svg";
 import Spacechat from "../assets/thumbnails/spacechat.svg";
 import Twitch from "../assets/thumbnails/twitch.svg";
+import Beatles from "../assets/thumbnails/beatles.svg";
+import Near from "../assets/thumbnails/near-me.svg";
 import Arrow from "../assets/lines/arrow.svg";
 import LineMobile from "../assets/lines/line-projects.svg";
 import LineDesktop from "../assets/lines/desktop/line-projects.svg";
@@ -157,12 +159,12 @@ function Projects() {
                     </div>
                     <p>
                       {" "}
-                      The twitch app that i fully redesigned and remade with
-                      <br /> angular.
+                      A poster that i designed to promote my group school
+                      <br /> project about The Beatles.
                     </p>
                     <h1>Beatles Poster</h1>
                   </div>
-                  <img src={Twitch} alt="twitch" className="thumbnail" />
+                  <img src={Beatles} alt="twitch" className="thumbnail" />
                 </div>
               </div>
 
@@ -177,12 +179,12 @@ function Projects() {
                     </div>
                     <p>
                       {" "}
-                      The twitch app that i fully redesigned and remade with
-                      <br /> angular.
+                      A school project design that i made for for a app made for
+                      <br /> student housing.
                     </p>
-                    <h1>Somrad Fest</h1>
+                    <h1>Near Me</h1>
                   </div>
-                  <img src={Twitch} alt="twitch" className="thumbnail" />
+                  <img src={Near} alt="twitch" className="thumbnail" />
                 </div>
               </div>
 
@@ -200,7 +202,7 @@ function Projects() {
                       The twitch app that i fully redesigned and remade with
                       <br /> angular.
                     </p>
-                    <h1>Logo</h1>
+                    <h1>Twitch Redesign</h1>
                   </div>
                   <img src={Twitch} alt="twitch" className="thumbnail" />
                 </div>
