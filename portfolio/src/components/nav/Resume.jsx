@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Document from "../../file/Somrad_Sharma_CV.pdf";
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -28,7 +29,9 @@ const ResumeButton = styled.button`
 function Resume() {
   return (
     <ButtonContainer>
-      <ResumeButton>RESUME</ResumeButton>
+      <a href={Document} download="Somrad_Sharma_Cv">
+        <ResumeButton>RESUME</ResumeButton>
+      </a>
     </ButtonContainer>
   );
 }

@@ -4,27 +4,26 @@ import LineMobile from "../assets/lines/line-hero.svg";
 import { useMediaQuery } from "./hooks/useMediaQuery";
 import LineDesktop from "../assets/lines/desktop/line-hero.svg";
 import Somrad from "../assets/somrad.jpg";
+import Resume from "../file/Somrad_Sharma_CV.pdf"
 import gsap from "gsap";
 
 function Hero() {
   const width = useMediaQuery();
 
   const handleMouseEnter = () => {
-      gsap.to(image, {
-        duration: 1,
-        opacity: 1,
-        x: 0,
-      });
-
+    gsap.to(image, {
+      duration: 1,
+      opacity: 1,
+      x: 0,
+    });
   };
 
   const handleMouseLeave = () => {
-      gsap.to(image, {
-        duration: 0.5,
-        opacity: 0,
-        x: -50,
-      });
-
+    gsap.to(image, {
+      duration: 0.5,
+      opacity: 0,
+      x: -50,
+    });
   };
 
   let Line;
@@ -100,7 +99,7 @@ function Hero() {
         </div>
 
         <img
-        className="profile-picture"
+          className="profile-picture"
           src={Somrad}
           alt="somrad"
           style={{
@@ -121,7 +120,9 @@ function Hero() {
             as a designer / front end developer.
           </p>{" "}
           <div className="button" ref={(el) => (button1 = el)}>
-            <button>RESUME</button>
+            <a href={Resume} download="Somrad_Sharma_Cv">
+              <button>RESUME</button>
+            </a>
           </div>
           <div className="line">
             <img src={Line} alt="line-svg" />
