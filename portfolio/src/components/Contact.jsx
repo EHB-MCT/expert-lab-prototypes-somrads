@@ -40,7 +40,7 @@ function Contact() {
   }
 
   return (
-    <div className="Contact">
+    <div className="Contact" id="contact">
       <div className="main-content">
         <div className="title">
           <h1>3. Contact</h1>

@@ -1,3 +1,7 @@
+//  bron deze code
+// https://www.youtube.com/watch?v=mt7bcvsreMQ 
+// https://github.com/ipenywis/react-navbar-responsive
+
 import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";

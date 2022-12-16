@@ -39,7 +39,7 @@ function About() {
   }
 
   return (
-    <div className="About">
+    <div className="About" id="about">
       <div className="content-right">
         <h1 id="title">1. About Me</h1>
         <div className="line">

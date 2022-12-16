@@ -27,7 +27,7 @@ const ResumeButton = styled.button`
 
 function Resume() {
   return (
-    <ButtonContainer data-scroll-container>
+    <ButtonContainer>
       <ResumeButton>RESUME</ResumeButton>
     </ButtonContainer>
   );

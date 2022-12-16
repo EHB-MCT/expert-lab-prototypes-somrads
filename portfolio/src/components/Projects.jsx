@@ -17,7 +17,6 @@ function Projects() {
   const width = useMediaQuery();
   const [currentSection, setCurrentSection] = useState("web");
 
-
   const handleSectionChange = (newSection) => {
     gsap.to(".project-sections", {
       duration: 0.5,
@@ -76,7 +75,7 @@ function Projects() {
   }
 
   return (
-    <div className="Projects">
+    <div className="Projects" id="projects">
       <div className="project-titles">
         <h1>2. Projects</h1>
         <div className="projects web">
@@ -110,14 +109,16 @@ function Projects() {
                   <div className="content-projects">
                     <div className="learn-more">
                       <button>
-                     View Project
+                        View Project
                         <img src={Arrow} alt="arrow" />
                       </button>
                     </div>
                     <p>
                       {" "}
                       A website that i designed and build for a café in <br />{" "}
-                      Leuven using <span className="accent">React</span>  and <span className="accent">Framer Motion</span>.
+                      Leuven using <span className="accent">
+                        React
+                      </span> and <span className="accent">Framer Motion</span>.
                     </p>
                     <h1>Café Website</h1>
                   </div>
@@ -130,14 +131,16 @@ function Projects() {
                   <div className="content-projects">
                     <div className="learn-more">
                       <button>
-                      View Project
+                        View Project
                         <img src={Arrow} alt="arrow" />
                       </button>
                     </div>
                     <p>
                       {" "}
                       A live chat app designed and build for space lovers <br />{" "}
-                      that prefers animosity using <span className="accent">React</span>  and <span className="accent">Socket.io</span>. 
+                      that prefers animosity using{" "}
+                      <span className="accent">React</span> and{" "}
+                      <span className="accent">Socket.io</span>.
                     </p>
                     <h1>Space Chat</h1>
                   </div>
@@ -150,7 +153,7 @@ function Projects() {
                   <div className="content-projects">
                     <div className="learn-more">
                       <button>
-                      View Project
+                        View Project
                         <img src={Arrow} alt="arrow" />
                       </button>
                     </div>
@@ -174,14 +177,15 @@ function Projects() {
                   <div className="content-projects">
                     <div className="learn-more">
                       <button>
-                      View Project
+                        View Project
                         <img src={Arrow} alt="arrow" />
                       </button>
                     </div>
                     <p>
                       {" "}
                       A poster that i designed to promote my group school
-                      <br /> project about The Beatles with <span className="accent">Illustrator</span>.
+                      <br /> project about The Beatles with{" "}
+                      <span className="accent">Illustrator</span>.
                     </p>
                     <h1>Beatles Poster</h1>
                   </div>
@@ -194,14 +198,15 @@ function Projects() {
                   <div className="content-projects">
                     <div className="learn-more">
                       <button>
-                      View Project
+                        View Project
                         <img src={Arrow} alt="arrow" />
                       </button>
                     </div>
                     <p>
                       {" "}
                       A school project design that i made for for a app made for
-                      <br /> student housing with <span className="accent">Adobe XD</span>.
+                      <br /> student housing with{" "}
+                      <span className="accent">Adobe XD</span>.
                     </p>
                     <h1>Near Me</h1>
                   </div>
@@ -214,7 +219,7 @@ function Projects() {
                   <div className="content-projects">
                     <div className="learn-more">
                       <button>
-                      View Project
+                        View Project
                         <img src={Arrow} alt="arrow" />
                       </button>
                     </div>

@@ -1,5 +1,8 @@
-import Reactw from "react";
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
+import "./links.scss"
 
 const NavLinksContainer = styled.div`
   height: 100%;
@@ -26,23 +29,30 @@ const LinkItem = styled.li`
 
 const Link = styled.a`
   text-decoration: none;
-  color: inherit;
+  color: black;
   font-size: inherit;
   padding: 0 1.1em;
 `;
 
-
 function NavLinks() {
   return (
-    <NavLinksContainer>
-      <LinksWrapper>
-        <LinkItem>
-          <Link href="#">1. About Me</Link>
-          <Link href="#">2. Projects</Link>
-          <Link href="#">3. Contact</Link>
-        </LinkItem>
-      </LinksWrapper>
-    </NavLinksContainer>
+    <Router>
+      <NavLinksContainer>
+        <LinksWrapper>
+          <LinkItem>
+            <Link>
+              <HashLink to="#about">1. about me</HashLink>
+            </Link>
+            <Link href="#">
+              <HashLink to="#projects">2. projects</HashLink>
+            </Link>
+            <Link href="#">
+              <HashLink to="#contact">3. contact</HashLink>
+            </Link>
+          </LinkItem>
+        </LinksWrapper>
+      </NavLinksContainer>
+    </Router>
   );
 }
 

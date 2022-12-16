@@ -2,8 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import MenuToggle from "./menuToggle";
 import ResumeButton from "./Resume";
+import { BrowserRouter as Router } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import Line from "../../assets/lines/line-left.svg"
 import gsap from "gsap";
+import "./links.scss"
 
 const NavLinksContainer = styled.div`
   height: 100%;
@@ -70,18 +73,25 @@ function MobileNavLinks() {
   });
 
   return (
+    <Router>
     <NavLinksContainer>
       <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
       {isOpen && (
         <LinksWrapper ref={(el) => (navContainer = el)}>
           <LinkItem>
-            <Link href="#">1. about me</Link>
+          <Link>
+              <HashLink to="#about">1. about me</HashLink>
+            </Link>
           </LinkItem>
           <LinkItem>
-            <Link href="#">2. projects</Link>
+          <Link>
+              <HashLink to="#projects">2. projects</HashLink>
+            </Link>
           </LinkItem>
           <LinkItem>
-            <Link href="#">3. contact</Link>
+          <Link>
+              <HashLink to="#contact">3. contact </HashLink>
+            </Link>
           </LinkItem>
           <LineContainer>
             <img src={Line} alt="stroke-line" />
@@ -90,6 +100,7 @@ function MobileNavLinks() {
         </LinksWrapper>
       )}
     </NavLinksContainer>
+    </Router>
   );
 }
 
