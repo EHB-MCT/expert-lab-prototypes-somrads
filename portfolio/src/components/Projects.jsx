@@ -214,14 +214,14 @@ function Projects() {
                   <div className="content-projects">
                     <div className="learn-more">
                     <a
-                        href="https://somrad-twitchapp.web.app"
-                        target="_blank"
-                      >
-                        <button>
-                          View Project
-                          <img src={Arrow} alt="arrow" />
-                        </button>
-                      </a>
+                      href="https://xd.adobe.com/view/3063b08c-4657-41ad-a163-4b7bb1bc6593-6530/"
+                      target="_blank"
+                    >
+                      <button>
+                        View Project
+                        <img src={Arrow} alt="arrow" />
+                      </button>
+                    </a>
                     </div>
                     <p>
                       {" "}
@@ -239,10 +239,16 @@ function Projects() {
                 <div className="spacer">
                   <div className="content-projects">
                     <div className="learn-more">
-                      <button>
-                        View Project
-                        <img src={Arrow} alt="arrow" />
-                      </button>
+                      <a
+                        href="https://adobeid-na1.services.adobe.com/ims/jump/eyJraWQiOiJpbXNfbmExLWtleS1hdC0xIiwiYWxnIjoiUlMyNTYifQ.eyJqdGkiOiIxNjcxMjI4MzY1NjkzX2Q5ZDEwMGVjLTQ2NmQtNDFiYy04ZDYzLWIzMWU4OThjYWRjNl9ldzEiLCJjaWQiOiJDb21ldFdlYjEiLCJ1aWQiOiI1Q0E0MDRCRTVCQjVGMjYwMEE0OTVFMkNAQWRvYmVJRCIsInJ1IjoiaHR0cHM6Ly94ZC5hZG9iZS5jb20vdmlldy8yYjYxZTU4Mi05OTVkLTRlMTktOTAyMC1kNmE5ZDFjMWJkYjEtN2UzMi8iLCJydCI6InRva2VuIiwiY2UiOiJBZF9fRHhieUZyUHg1cFdyWDV4b3hSbkRtVnFIRzlqc1FDa1k4Y1RDS1ktaVlBUTNLUVYwOVZCYVR6VzY1UVotcUZ5MTgzVkhLRm9aNm9CTGJYWUc5Tm8xMHN2QnRfUGtXSEEta3N0S2ZBZnNKUSIsImV4cCI6MTY3MTIyOTI2NTY5MywicmYiOiJYQkJNWVk2M1ZQRTVJWFVLT01RVllIWUFITT09PT09PSIsInNpcCI6Ijc0MDA5YzExIiwiZHRpZCI6IjE1NzkzMDA2NjkyMDhfMDNkOGUzZGEtYjdiNi00ZWU4LTgyMmYtZDUyODYwMDMwZGIxX3VlMSIsImlzcyI6Imh0dHBzOi8vaW1zLW5hMS5hZG9iZWxvZ2luLmNvbSJ9.PKte0TQLv00jOH1tWTCXIX_O1WkIi61q4SeFmkj7dT0bHJ3hrZp0PCb5lot8j3QyJWefdoAe_Qwcib3nLLY3FM0GrMZPBYli4KLDAybMFdi7gmlb3W9ipnOmbV-7Ryyw1y63nY5Lk1ycNBQ3J9NsdhRpPBTP74HuA7t49tkAgD9HqV2Ydsslh5Gl98_bxvFRsaPAAagHdUaf-3ttzDG6hOas4ElYpvFKI8Ro7lVGVhO8kZsZ7id2aYXFEL7jA2ZP10K7Wp3r4DEQI8B97uSH8gNe1tw10r1wIzC3G3rJ3AC2K2KyxJhJSugswNJjXsUp1vTDDTdN_c0z3KXYpwCaog
+                        "
+                        target="_blank"
+                      >
+                        <button>
+                          View Project
+                          <img src={Arrow} alt="arrow" />
+                        </button>
+                      </a>
                     </div>
                     <p>
                       {" "}
