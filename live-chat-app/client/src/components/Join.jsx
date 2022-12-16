@@ -14,7 +14,10 @@ function Join() {
         <div className="text">
           <h1>spacechat</h1>
           <h2>
-            Talk with your fellow space fanatics about the wonders of space
+            Talk with your fellow space fanatics about the wonders of space.{" "}
+            <br />
+            Enter your username and then enter your room name to join your
+            friends or create your own room by also entering a room name.
           </h2>
         </div>
       </div>
