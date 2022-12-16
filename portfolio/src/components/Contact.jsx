@@ -19,7 +19,7 @@ function Contact() {
       },
       {
         x: 0,
-        duration: 2,
+        duration: 1,
         ease: "ease-in-out",
         opacity: 1,
         delay: 1,
