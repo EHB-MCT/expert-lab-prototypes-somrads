@@ -18,6 +18,9 @@ ul {
   list-style: none;
 }
 .Hero {
+  .profile-picture {
+    visibility: hidden;
+  }
   .hero-section {
     span {
       color: $accentColor;
@@ -83,6 +86,9 @@ ul {
 /* Responsiveness */
 @media (min-width: 768px) {
   .Hero {
+    .profile-picture{
+      visibility: visible;
+    }
     .hero-section {
       h1 {
         font-family: "El Messiri", sans-serif;
@@ -97,7 +103,7 @@ ul {
       }
 
       .rechts-title {
-        margin-top: -4%;
+        margin-top: -0%;
         margin-left: 50%;
         .title-left {
           margin-left: 15%;
@@ -122,7 +128,7 @@ ul {
           width: 80%;
           margin-left: 0%;
           img {
-            width:600px;
+            width: 600px;
             height: 15px;
           }
         }

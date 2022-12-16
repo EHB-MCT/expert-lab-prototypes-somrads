@@ -1,13 +1,32 @@
-import React, { useRef, useEffect, useState, useCallback } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "../styles/hero.scss";
 import LineMobile from "../assets/lines/line-hero.svg";
 import { useMediaQuery } from "./hooks/useMediaQuery";
 import LineDesktop from "../assets/lines/desktop/line-hero.svg";
+import Somrad from "../assets/somrad.jpg";
 import gsap from "gsap";
 
 function Hero() {
   const width = useMediaQuery();
-  
+
+  const handleMouseEnter = () => {
+      gsap.to(image, {
+        duration: 1,
+        opacity: 1,
+        x: 0,
+      });
+
+  };
+
+  const handleMouseLeave = () => {
+      gsap.to(image, {
+        duration: 0.5,
+        opacity: 0,
+        x: -50,
+      });
+
+  };
+
   let Line;
   if (width <= 600) {
     // Show the mobile image for widths <= 600
@@ -22,6 +41,7 @@ function Hero() {
   let text4 = useRef(null);
   let p1 = useRef(null);
   let button1 = useRef(null);
+  let image = useRef(null);
 
   const timeline_home = gsap.timeline({
     defaults: {
@@ -60,14 +80,40 @@ function Hero() {
           </div>
 
           <div className="rechts-title">
-            <h1 className="title" ref={(el) => (text3 = el)}>
+            <h1
+              className="title"
+              ref={(el) => (text3 = el)}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               Somrad
             </h1>
-            <h1 className="title-left" ref={(el) => (text4 = el)}>
+            <h1
+              className="title-left"
+              ref={(el) => (text4 = el)}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               Sharma
             </h1>
           </div>
         </div>
+
+        <img
+        className="profile-picture"
+          src={Somrad}
+          alt="somrad"
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            opacity: 0,
+            x: -50,
+          }}
+          ref={(el) => (image = el)}
+        />
+
         <div className="hero-content">
           <p ref={(el) => (p1 = el)}>
             I make cool stuff on the web. I am currently looking for a{" "}
