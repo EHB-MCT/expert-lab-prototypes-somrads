@@ -55,7 +55,7 @@ function Contact() {
           </a>
 
           <div className="images">
-            <a href="linkedin.com/in/somradsharma" target="_blank">
+            <a href="https://www.linkedin.com/in/somradsharma/" target="_blank">
               {" "}
               <img src={LinkedIn} alt="linkedIn" />
             </a>
