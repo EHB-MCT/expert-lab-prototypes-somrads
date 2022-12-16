@@ -8,6 +8,7 @@ import Twitch from "../assets/thumbnails/twitch.svg";
 import Beatles from "../assets/thumbnails/beatles.svg";
 import Near from "../assets/thumbnails/near-me.svg";
 import Arrow from "../assets/lines/arrow.svg";
+import BeatlesPoster from "../file/posterFinal.png";
 import LineMobile from "../assets/lines/line-projects.svg";
 import LineDesktop from "../assets/lines/desktop/line-projects.svg";
 import LineMobile3 from "../assets/lines/line-projects-bottom.svg";
@@ -108,10 +109,12 @@ function Projects() {
                 <div className="spacer">
                   <div className="content-projects">
                     <div className="learn-more">
-                      <button>
-                        View Project
-                        <img src={Arrow} alt="arrow" />
-                      </button>
+                      <a href="https://lapaz.vercel.app/" target="_blank">
+                        <button>
+                          View Project
+                          <img src={Arrow} alt="arrow" />
+                        </button>
+                      </a>
                     </div>
                     <p>
                       {" "}
@@ -119,6 +122,7 @@ function Projects() {
                       Leuven using <span className="accent">
                         React
                       </span> and <span className="accent">Framer Motion</span>.
+                      (Currently in development)
                     </p>
                     <h1>Café Website</h1>
                   </div>
@@ -130,10 +134,12 @@ function Projects() {
                 <div className="spacer">
                   <div className="content-projects">
                     <div className="learn-more">
-                      <button>
-                        View Project
-                        <img src={Arrow} alt="arrow" />
-                      </button>
+                      <a href="https://spacechat.vercel.app/" target="_blank">
+                        <button>
+                          View Project
+                          <img src={Arrow} alt="arrow" />
+                        </button>
+                      </a>
                     </div>
                     <p>
                       {" "}
@@ -152,10 +158,15 @@ function Projects() {
                 <div className="spacer">
                   <div className="content-projects">
                     <div className="learn-more">
-                      <button>
-                        View Project
-                        <img src={Arrow} alt="arrow" />
-                      </button>
+                      <a
+                        href="https://somrad-twitchapp.web.app"
+                        target="_blank"
+                      >
+                        <button>
+                          View Project
+                          <img src={Arrow} alt="arrow" />
+                        </button>
+                      </a>
                     </div>
                     <p>
                       {" "}
@@ -176,10 +187,15 @@ function Projects() {
                 <div className="spacer">
                   <div className="content-projects">
                     <div className="learn-more">
-                      <button>
-                        View Project
-                        <img src={Arrow} alt="arrow" />
-                      </button>
+                      <a
+                        href={BeatlesPoster}
+                        download="Beatles_Poster_SomradSharma"
+                      >
+                        <button>
+                          View Project
+                          <img src={Arrow} alt="arrow" />
+                        </button>
+                      </a>
                     </div>
                     <p>
                       {" "}
@@ -197,10 +213,15 @@ function Projects() {
                 <div className="spacer">
                   <div className="content-projects">
                     <div className="learn-more">
-                      <button>
-                        View Project
-                        <img src={Arrow} alt="arrow" />
-                      </button>
+                    <a
+                        href="https://somrad-twitchapp.web.app"
+                        target="_blank"
+                      >
+                        <button>
+                          View Project
+                          <img src={Arrow} alt="arrow" />
+                        </button>
+                      </a>
                     </div>
                     <p>
                       {" "}
