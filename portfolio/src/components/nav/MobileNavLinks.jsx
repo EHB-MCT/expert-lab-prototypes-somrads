@@ -4,9 +4,9 @@ import MenuToggle from "./MenuToggle.jsx";
 import ResumeButton from "./Resume";
 import { BrowserRouter as Router } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import Line from "../../assets/lines/line-left.svg"
+import Line from "../../assets/lines/line-left.svg";
 import gsap from "gsap";
-import "./links.scss"
+import "./links.scss";
 
 const NavLinksContainer = styled.div`
   height: 100%;
@@ -74,32 +74,32 @@ function MobileNavLinks() {
 
   return (
     <Router>
-    <NavLinksContainer>
-      <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
-      {isOpen && (
-        <LinksWrapper ref={(el) => (navContainer = el)}>
-          <LinkItem>
-          <Link>
-              <HashLink to="#about">1. about me</HashLink>
-            </Link>
-          </LinkItem>
-          <LinkItem>
-          <Link>
-              <HashLink to="#projects">2. projects</HashLink>
-            </Link>
-          </LinkItem>
-          <LinkItem>
-          <Link>
-              <HashLink to="#contact">3. contact </HashLink>
-            </Link>
-          </LinkItem>
-          <LineContainer>
-            <img src={Line} alt="stroke-line" />
-          </LineContainer>
-          <ResumeButton></ResumeButton>
-        </LinksWrapper>
-      )}
-    </NavLinksContainer>
+      <NavLinksContainer>
+        <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
+        {isOpen && (
+          <LinksWrapper ref={(el) => (navContainer = el)}>
+            <LinkItem>
+              <Link>
+                <HashLink to="#about">1. about me</HashLink>
+              </Link>
+            </LinkItem>
+            <LinkItem>
+              <Link>
+                <HashLink to="#projects">2. projects</HashLink>
+              </Link>
+            </LinkItem>
+            <LinkItem>
+              <Link>
+                <HashLink to="#contact">3. contact </HashLink>
+              </Link>
+            </LinkItem>
+            <LineContainer>
+              <img src={Line} alt="stroke-line" />
+            </LineContainer>
+            <ResumeButton></ResumeButton>
+          </LinksWrapper>
+        )}
+      </NavLinksContainer>
     </Router>
   );
 }

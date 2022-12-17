@@ -30,7 +30,7 @@ const LinkItem = styled.li`
 const Link = styled.a`
   text-decoration: none;
   color: black;
-  font-size: inherit;
+  font-size: 1.3rem;
   padding: 0 1.1em;
 `;
 

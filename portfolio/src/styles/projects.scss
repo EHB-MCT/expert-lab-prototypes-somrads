@@ -10,6 +10,11 @@ $accentColor: #bd3656;
     font-size: 2.5rem;
   }
   .project-titles {
+    .learn-more{
+      img{
+        margin-left: 20px;
+      }
+    }
     ul {
       display: flex;
       font-family: "Raleway", sans-serif;
@@ -55,6 +60,7 @@ $accentColor: #bd3656;
         button {
           display: flex;
           margin-top: 4%;
+       
           border: none;
           font-family: "Raleway", sans-serif;
           font-weight: 600;
