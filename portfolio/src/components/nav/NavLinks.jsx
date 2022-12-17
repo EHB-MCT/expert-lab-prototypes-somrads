@@ -44,10 +44,10 @@ function NavLinks() {
             <Link>
               <HashLink to="#about">1. about me</HashLink>
             </Link>
-            <Link href="#">
+            <Link>
               <HashLink to="#projects">2. projects</HashLink>
             </Link>
-            <Link href="#">
+            <Link>
               <HashLink to="#contact">3. contact</HashLink>
             </Link>
           </LinkItem>

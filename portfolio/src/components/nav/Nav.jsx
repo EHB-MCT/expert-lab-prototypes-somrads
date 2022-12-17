@@ -28,18 +28,16 @@ const RightSection = styled.div`
   display: flex;
 `;
 
-const ImageSection = styled.img`
-  width: 80px;
-`;
+
 
 function Nav() {
   const isMobile = useMediaQuery({ maxWidth: DeviceSizes.mobile });
   return (
     <NavBarContainer>
       <LeftSection>
-        <ImageSection>
-          <img src={Logo} alt="logo" />
-        </ImageSection>
+
+        <img src={Logo} alt="logo" id="logo"/>
+
       </LeftSection>
       <MiddleSection></MiddleSection>
       <RightSection>
