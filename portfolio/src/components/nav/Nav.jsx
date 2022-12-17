@@ -5,7 +5,7 @@ import styled from "styled-components";
 import NavLinks from "./NavLinks.jsx";
 import DeviceSizes from "./index";
 import MobileNavLinks from "./MobileNavLinks.jsx";
-import "../../styles/nav.scss"
+import "../../styles/nav.scss";
 
 const NavBarContainer = styled.div`
   width: 100%,
@@ -29,7 +29,7 @@ const RightSection = styled.div`
 `;
 
 const ImageSection = styled.img`
-  with: 80px;
+  width: 80px;
 `;
 
 function Nav() {
@@ -37,7 +37,9 @@ function Nav() {
   return (
     <NavBarContainer>
       <LeftSection>
+        <ImageSection>
           <img src={Logo} alt="logo" />
+        </ImageSection>
       </LeftSection>
       <MiddleSection></MiddleSection>
       <RightSection>

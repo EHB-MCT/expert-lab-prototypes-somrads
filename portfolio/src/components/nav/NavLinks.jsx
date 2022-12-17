@@ -25,6 +25,7 @@ const LinkItem = styled.li`
   font-size: 14px;
   align-items: center;
   justify-content: center;
+  padding-top: 1.5em
 `;
 
 const Link = styled.a`
