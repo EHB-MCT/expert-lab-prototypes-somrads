@@ -2,9 +2,9 @@ import React, { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import Logo from "../../assets/logo.svg";
 import styled from "styled-components";
-import NavLinks from "./NavLinks";
+import NavLinks from "./NavLinks.jsx";
 import DeviceSizes from "./index";
-import MobileNavLinks from "./MobileNavLinks";
+import MobileNavLinks from "./MobileNavLinks.jsx";
 import "../../styles/nav.scss"
 
 const NavBarContainer = styled.div`
