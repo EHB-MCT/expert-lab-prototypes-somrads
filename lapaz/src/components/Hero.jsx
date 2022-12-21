@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 function Hero() {
   return (
     <div className="Hero" id="Home">
-      
       <Router>
         <div className="nav">
           <ul className="nav-list">

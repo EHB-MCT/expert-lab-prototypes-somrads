@@ -28,10 +28,10 @@ function Chat() {
 
     socket.emit("join", { name, room }, (error) => {
       if (error) {
-        alert(error);
+        alert(error);  
       }
     });
-  }, [ENDPOINT]);
+  }, [ENDPOINT]); 
 
   useEffect(() => {
     socket.on("message", (message) => {

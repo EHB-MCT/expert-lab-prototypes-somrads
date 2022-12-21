@@ -5,7 +5,7 @@ import "../styles/join.scss";
 function Join() {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
-
+ 
   return (
     <div className="container">
       <div className="background-img"></div>

@@ -30,6 +30,7 @@ function Reserveren() {
         }
       );
   };
+  
   const [popup, setPopup] = useState(false);
   const [layoutId, setlayoutId] = useState(null);
 
@@ -42,6 +43,7 @@ function Reserveren() {
       setlayoutId(null);
     }
   };
+
   const textAnimate = {
     offscreen: { y: -100, opacity: 0 },
     onscreen: {
@@ -144,7 +146,7 @@ function Reserveren() {
                         alt={item.name}
                         layoutId={item.id}
                       />
-                    </motion.div>
+                    </motion.div> 
                   );
                 })}
               </div>
