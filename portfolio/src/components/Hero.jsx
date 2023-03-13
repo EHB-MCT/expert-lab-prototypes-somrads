@@ -3,27 +3,11 @@ import "../styles/hero.scss";
 import LineMobile from "../assets/lines/line-hero.svg";
 import { useMediaQuery } from "./hooks/useMediaQuery";
 import LineDesktop from "../assets/lines/desktop/line-hero.svg";
-import Resume from "../file/Somrad_Sharma_CV.pdf";
+import Resume from "../file/Somrad_Sharma_CV.pdf"
 import gsap from "gsap";
 
 function Hero() {
   const width = useMediaQuery();
-
-  const handleMouseEnter = () => {
-    gsap.to(image, {
-      duration: 1,
-      opacity: 1,
-      x: 0,
-    });
-  };
-
-  const handleMouseLeave = () => {
-    gsap.to(image, {
-      duration: 0.5,
-      opacity: 0,
-      x: -50,
-    });
-  };
 
   let Line;
   if (width <= 600) {
@@ -78,12 +62,17 @@ function Hero() {
           </div>
 
           <div className="rechts-title">
-            <h1>Somrad</h1>
+            <h1
+              className="title"
+              ref={(el) => (text3 = el)}
+
+            >
+              Somrad
+            </h1>
             <h1
               className="title-left"
               ref={(el) => (text4 = el)}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+
             >
               Sharma
             </h1>
@@ -92,8 +81,9 @@ function Hero() {
 
         <div className="hero-content">
           <p ref={(el) => (p1 = el)}>
-            I make cool stuff on the web. I am currently <span>interning</span>
-            at AB-Inbev as a automation developer.
+            I make cool stuff on the web. I am currently a{" "}
+            <span>intern </span>
+            at Ab-Inbev as a Automation Developer.
           </p>{" "}
           <div className="button" ref={(el) => (button1 = el)}>
             <a href={Resume} download="Somrad_Sharma_Cv">
