@@ -3,8 +3,7 @@ import "../styles/hero.scss";
 import LineMobile from "../assets/lines/line-hero.svg";
 import { useMediaQuery } from "./hooks/useMediaQuery";
 import LineDesktop from "../assets/lines/desktop/line-hero.svg";
-import Somrad from "../assets/somrad.jpg";
-import Resume from "../file/Somrad_Sharma_CV.pdf"
+import Resume from "../file/Somrad_Sharma_CV.pdf";
 import gsap from "gsap";
 
 function Hero() {
@@ -79,14 +78,7 @@ function Hero() {
           </div>
 
           <div className="rechts-title">
-            <h1
-              className="title"
-              ref={(el) => (text3 = el)}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              Somrad
-            </h1>
+            <h1>Somrad</h1>
             <h1
               className="title-left"
               ref={(el) => (text4 = el)}
@@ -98,26 +90,10 @@ function Hero() {
           </div>
         </div>
 
-        <img
-          className="profile-picture"
-          src={Somrad}
-          alt="somrad"
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            opacity: 0,
-            x: -50,
-          }}
-          ref={(el) => (image = el)}
-        />
-
         <div className="hero-content">
           <p ref={(el) => (p1 = el)}>
-            I make cool stuff on the web. I am currently looking for a{" "}
-            <span>internship </span>
-            as a designer / front end developer.
+            I make cool stuff on the web. I am currently <span>interning</span>
+            at AB-Inbev as a automation developer.
           </p>{" "}
           <div className="button" ref={(el) => (button1 = el)}>
             <a href={Resume} download="Somrad_Sharma_Cv">
