@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/projects.scss";
 import gsap from "gsap";
 import { useMediaQuery } from "./hooks/useMediaQuery";
-import Lapaz from "../assets/thumbnails/lapaz.svg";
+import Lapaz from "../assets/thumbnails/fewafish.svg";
 import Spacechat from "../assets/thumbnails/spacechat.svg";
 import Twitch from "../assets/thumbnails/twitch.svg";
 import Beatles from "../assets/thumbnails/beatles.svg";
@@ -109,7 +109,7 @@ function Projects() {
                 <div className="spacer">
                   <div className="content-projects">
                     <div className="learn-more">
-                      <a href="https://lapaz.vercel.app/" target="_blank">
+                      <a href="https://fewafish.be" target="_blank">
                         <button>
                           View Project
                           <img src={Arrow} alt="arrow" />
@@ -118,13 +118,12 @@ function Projects() {
                     </div>
                     <p>
                       {" "}
-                      A website that i designed and build for a café in <br />{" "}
-                      Leuven using <span className="accent">
-                        React
-                      </span> and <span className="accent">Framer Motion</span>.
-                      (Currently in development)
+                      A website that i designed and build for a fish store in{" "}
+                      <br /> Leuven using <span className="accent">Figma</span>,
+                      <span className="accent">React</span> and{" "}
+                      <span className="accent">Framer Motion</span>.
                     </p>
-                    <h1>Café Website</h1>
+                    <h1>Fewa Fish</h1>
                   </div>
                   <img src={Lapaz} alt="lapaz" className="thumbnail" />
                 </div>
@@ -213,15 +212,15 @@ function Projects() {
                 <div className="spacer">
                   <div className="content-projects">
                     <div className="learn-more">
-                    <a
-                      href="https://xd.adobe.com/view/3063b08c-4657-41ad-a163-4b7bb1bc6593-6530/"
-                      target="_blank"
-                    >
-                      <button>
-                        View Project
-                        <img src={Arrow} alt="arrow" />
-                      </button>
-                    </a>
+                      <a
+                        href="https://xd.adobe.com/view/3063b08c-4657-41ad-a163-4b7bb1bc6593-6530/"
+                        target="_blank"
+                      >
+                        <button>
+                          View Project
+                          <img src={Arrow} alt="arrow" />
+                        </button>
+                      </a>
                     </div>
                     <p>
                       {" "}
