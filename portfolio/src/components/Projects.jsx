@@ -118,9 +118,10 @@ function Projects() {
                     </div>
                     <p>
                       {" "}
-                      A website that i designed and build for a fish store in{" "}
-                      <br /> Leuven using <span className="accent">Figma</span>,
-                      <span className="accent">React</span> and{" "}
+                      A mobile responsive website that i designed and build for
+                      a fish store in <br /> Leuven using{" "}
+                      <span className="accent">Figma</span>,
+                      <span className="accent"> React</span> and{" "}
                       <span className="accent">Framer Motion</span>.
                     </p>
                     <h1>Fewa Fish</h1>
