@@ -56,7 +56,7 @@ function Hero() {
         <div id="header-text">
           <div className="links-title">
             <h1 className="title" ref={(el) => (text1 = el)}>
-              Looking
+              Creative
             </h1>
             <h1 ref={(el) => (text2 = el)}>Developer</h1>
           </div>
@@ -81,9 +81,7 @@ function Hero() {
 
         <div className="hero-content">
           <p ref={(el) => (p1 = el)}>
-            I make cool stuff on the web. I am currently a{" "}
-            <span>intern </span>
-            at Ab-Inbev as a Automation Developer.
+            I make cool stuff on the web. I'm actively seeking <span>opportunities</span> in coding, design, or IT.
           </p>{" "}
           <div className="button" ref={(el) => (button1 = el)}>
             <a href={Resume} download="Somrad_Sharma_Cv">
