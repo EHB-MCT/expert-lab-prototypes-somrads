@@ -56,9 +56,9 @@ function Hero() {
         <div id="header-text">
           <div className="links-title">
             <h1 className="title" ref={(el) => (text1 = el)}>
-              Creative
+  Creative
             </h1>
-            <h1 ref={(el) => (text2 = el)}>Developer</h1>
+            <h1 ref={(el) => (text2 = el)}>Developer </h1>
           </div>
 
           <div className="rechts-title">

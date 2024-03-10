@@ -23,15 +23,12 @@ $accentColor: #bd3656;
         font-family: "Raleway", sans-serif;
         font-weight: lighter;
 
+
         &:nth-child(2) { 
           font-size: 0.6em; 
-          text-align: left;
-          width: auto; 
-          align-self: flex-end;
-          
-
-
+          align-self: flex-end; 
         }
+        
         &:nth-child(3) { 
           font-size: 0.6rem; 
           color:  $accentColor;
@@ -43,7 +40,6 @@ $accentColor: #bd3656;
       border-bottom: 0.9px solid black; 
     }
   }
-
 
 }
 

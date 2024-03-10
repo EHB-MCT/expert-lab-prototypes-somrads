@@ -36,7 +36,7 @@ function Nav() {
     <NavBarContainer>
       <LeftSection>
 
-        <img src={Logo} alt="logo" id="logo"  style={{ width: "40px", height: 'auto' }}/>
+        <img src={Logo} alt="logo" id="logo"  style={{ width: "30px", height: '70px' }}/>
 
       </LeftSection>
       <MiddleSection></MiddleSection>

@@ -84,7 +84,9 @@ function Projects() {
         <img src={Line3} alt="line" />
       </div>
 
-          <div className="project-item">
+
+        <div className="project-wrapper">
+        <div className="project-item">
             <p>fewa fish</p>
             <p id="project-tag">react.js</p>
             <p>website</p>
@@ -138,6 +140,8 @@ function Projects() {
             </p>
             <p id="project-tag">illustrator, photoshop, indesign</p>
             <p>branding</p>
+          </div>
+          
           </div>
 
 

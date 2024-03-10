@@ -47,29 +47,29 @@ function About() {
         </div>
         <div className="about-section">
           <p>
-            Hello! My name is Somrad and I am a student that studies in Erasmus
-            University College Brussels. <br /> I am currently doing my third
-            year bachelor in Creative Technologies & Business Communication. My
-            main focus these days is creating fun, cool designs and websites.
+            As a recent graduate from Erasmus University College Brussels, I have a strong affinity for crafting digital experiences. 
+            I am currently learning Blender and 3D modeling while undertaking freelance projects for clients.
           </p>
         </div>
       </div>
 
       <div className="technologies">
-        <p>Here are some technologies i worked with:</p>
+        <p>Here are some technologies i worked with</p>
         <div className="list">
           <ul>
             <li>JavaScript</li>
             <li>NodeJS</li>
             <li>ReactJS</li>
-            <li>Angular</li>
+            <li>Docker</li>
+            <li>Python</li>
           </ul>
 
           <ul>
-            <li>Adobe After Effects</li>
             <li>Adobe Illustrator</li>
+            <li>Adobe Photoshop</li>
+            <li>Adobe InDesign</li>
+            <li>Adobe After Effects</li>
             <li>Figma</li>
-            <li>AdobeXD</li>
           </ul>
         </div>
       </div>
