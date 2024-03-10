@@ -22,14 +22,18 @@ $accentColor: #bd3656;
       p{
         font-family: "Raleway", sans-serif;
         font-weight: lighter;
-        &:nth-child(2) { // Target the second <p> element (project-tag)
-          font-size: 0.7em; // Adjust the font size as needed
-          align-self: flex-end;
+
+        &:nth-child(2) { 
+          font-size: 0.6em; 
           text-align: left;
+          width: auto; 
+          align-self: flex-end;
+          
+
 
         }
-        &:nth-child(3) { // Target the second <p> element (project-tag)
-          font-size: 0.7rem; // Adjust the font size as needed
+        &:nth-child(3) { 
+          font-size: 0.6rem; 
           color:  $accentColor;
           align-self: flex-end;
 
@@ -70,7 +74,6 @@ $accentColor: #bd3656;
 
       .project-item{
         display: flex;
-        justify-content: space-between;
         margin: 1% 0%;
         padding-bottom: 20px;
         font-size: 2rem; 

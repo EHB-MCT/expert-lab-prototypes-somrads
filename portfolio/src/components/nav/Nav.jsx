@@ -12,7 +12,7 @@ const NavBarContainer = styled.div`
   height: 60px;
   display: flex;
   align-items: center;
-  padding: .5em .5em;
+  padding: .5em .1em;
 `;
 
 const LeftSection = styled.div`
@@ -36,7 +36,7 @@ function Nav() {
     <NavBarContainer>
       <LeftSection>
 
-        <img src={Logo} alt="logo" id="logo"/>
+        <img src={Logo} alt="logo" id="logo"  style={{ width: "40px", height: 'auto' }}/>
 
       </LeftSection>
       <MiddleSection></MiddleSection>
