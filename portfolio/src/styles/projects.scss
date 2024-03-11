@@ -40,11 +40,49 @@ $accentColor: #bd3656;
       border-bottom: 0.9px solid black; 
     }
   }
-
-  .item-info{
-    padding: 2cap 0%;
+  button {
+    display: flex;
+    margin-top: 1.5%;
+ 
+    border: none;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    background-color: #d7d6d4;
   }
 
+  .learn-more{
+    img{
+      margin-left: 20px;
+    }
+  }
+
+
+  .item-info{
+    position: relative;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    p{
+      font-family: "Raleway", sans-serif;
+      font-weight: lighter;
+      font-size: 1.2rem;
+    }
+    
+  }
+
+  .close-arrow {
+    position: absolute;
+    top: -4px;
+    right: 5px;
+    img {
+      transition: transform 0.3s ease; // Add a transition for a smooth effect
+      width: 10px; // Adjust the width as desired
+      height: 10px; // Adjust the height as desired
+  
+      &:hover {
+        transform: scale(1.5); // Change the scale factor as desired
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {

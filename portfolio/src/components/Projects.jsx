@@ -1,71 +1,65 @@
-import React, { useEffect, useState } from "react";
-import "../styles/projects.scss";
+import React, { useEffect, useState, useRef,useLayoutEffect } from "react";
 import gsap from "gsap";
 import { useMediaQuery } from "./hooks/useMediaQuery";
-import Lapaz from "../assets/thumbnails/fewafish.svg";
-import Spacechat from "../assets/thumbnails/spacechat.svg";
-import Twitch from "../assets/thumbnails/twitch.svg";
-import Beatles from "../assets/thumbnails/beatles.svg";
-import Near from "../assets/thumbnails/near-me.svg";
 import Arrow from "../assets/lines/arrow.svg";
-import BeatlesPoster from "../file/posterFinal.png";
+import CloseArrow from "../assets/arrow-up.svg";
 import LineMobile from "../assets/lines/line-projects.svg";
 import LineDesktop from "../assets/lines/desktop/line-projects.svg";
 import LineMobile3 from "../assets/lines/line-projects-bottom.svg";
 import LineDesktop3 from "../assets/lines/desktop/line-projects-bottom.svg";
+import "../styles/projects.scss";
 
 function Projects() {
   const width = useMediaQuery();
   const [currentSection, setCurrentSection] = useState("web");
   const [clickedProject, setClickedProject] = useState(null);
+  const infoRef = useRef(null);
 
   const handleClick = (projectName) => {
-    setClickedProject(projectName);
-  }
+    console.log("Clicked project:", projectName);
+    if (projectName === clickedProject) {
+      // If the same project is clicked again, close it
+      animateProject(false);
+      setClickedProject(null);
+    } else {
+      // Otherwise, open the clicked project
+      setClickedProject(projectName);
+      animateProject(true);
+    }
+  };
 
-  const handleUnClick = () => {
-    setClickedProject(null);
-  }
-
-  const handleSectionChange = (newSection) => {
-    gsap.to(".project-sections", {
-      duration: 0.5,
-      x: "-100%",
-      opacity: 0,
-      stagger: 0.25,
-      onComplete: () => {
-        setCurrentSection(newSection);
-      },
+  const animateProject = (show) => {
+    console.log("Animating project:", show);
+    const target = infoRef.current;
+  
+    // Check if the ref is available before animating
+    target?.style && gsap.to(target, {
+      duration: 1,
+      height: show ? "100%" : 0,
+      opacity: show ? 1 : 0,
+      ease: "power2.inOut",
     });
   };
 
-  // useEffect(() => {
-  //   gsap.from(".project-sections", {
-  //     x: "100%",
-  //     duration: 1,
-  //     opacity: 1,
-  //   });
-  // }, [currentSection]);
-
-  // useEffect(() => {
-  //   gsap.fromTo(
-  //     ".Projects",
-  //     {
-  //       x: -100,
-  //       opacity: 0,
-  //     },
-  //     {
-  //       x: 0,
-  //       duration: 1,
-  //       ease: "ease-in-out",
-  //       opacity: 1,
-  //       delay: 1,
-  //       scrollTrigger: {
-  //         trigger: ".Projects",
-  //       },
-  //     }
-  //   );
-  // }, []);
+  useLayoutEffect(() => {
+    gsap.fromTo(
+      ".Projects",
+      {
+        x: -100,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        duration: 1,
+        ease: "ease-in-out",
+        opacity: 1,
+        delay: 1,
+        scrollTrigger: {
+          trigger: ".Projects",
+        },
+      }
+    );
+  }, []);
 
   let Line;
   if (width <= 600) {
@@ -102,10 +96,29 @@ function Projects() {
           </div>
 
           {clickedProject === "fewa fish" && (
-            <div className="item-info">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda illo quo suscipit ab doloribus itaque, tempora facilis earum, magnam velit eum. Impedit eius aliquid sunt nemo adipisci? Maiores, officia recusandae!
+            <div className="item-info" ref={infoRef}  onClick={() => handleClick("fewa fish")}>
+              <div className="close-arrow">
+                <img src={CloseArrow} alt="close-arrow" />
+              </div>
+
+              <p>
+                I've created a sleek, mobile-responsive website for a fish store
+                in Leuven. It's designed to captivate visitors, showcasing the
+                store's diverse offerings. The site promises a seamless and
+                engaging online experience, elevating the client's digital
+                presence.
+              </p>
+              <div className="learn-more">
+                      <a href="https://fewafish.be" target="_blank">
+                        <button>
+                          View Project
+                          <img src={Arrow} alt="arrow" />
+                        </button>
+                      </a>
+                    </div>
             </div>
           )}
+
 
           <div className="project-item">
             <p>spacechat</p>
@@ -158,7 +171,6 @@ function Projects() {
           </div>
           
           </div>
-
 
       </div>
     </div>
