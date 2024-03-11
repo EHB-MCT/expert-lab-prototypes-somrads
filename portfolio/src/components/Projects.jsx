@@ -87,7 +87,6 @@ function Projects() {
         <img src={Line3} alt="line" />
       </div>
 
-
       <div className="project-wrapper">
           <div className="project-item" onClick={() => handleClick("fewa fish")}>
             <p>fewa fish</p>

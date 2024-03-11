@@ -1,5 +1,6 @@
 .Footer {
   .footer-container {
+    position: fixed;
     display: flex;
     justify-content: center;
     font-family: "Raleway", sans-serif;
@@ -7,6 +8,7 @@
     text-align: center;
     position: absolute;
     width: 100%;
+    height: auto;
     margin: 0% -7%;
     margin-top: 7%;
     padding: 3%;
