@@ -17,6 +17,15 @@ import LineDesktop3 from "../assets/lines/desktop/line-projects-bottom.svg";
 function Projects() {
   const width = useMediaQuery();
   const [currentSection, setCurrentSection] = useState("web");
+  const [clickedProject, setClickedProject] = useState(null);
+
+  const handleClick = (projectName) => {
+    setClickedProject(projectName);
+  }
+
+  const handleUnClick = () => {
+    setClickedProject(null);
+  }
 
   const handleSectionChange = (newSection) => {
     gsap.to(".project-sections", {
@@ -85,12 +94,18 @@ function Projects() {
       </div>
 
 
-        <div className="project-wrapper">
-        <div className="project-item">
+      <div className="project-wrapper">
+          <div className="project-item" onClick={() => handleClick("fewa fish")}>
             <p>fewa fish</p>
             <p id="project-tag">react.js</p>
             <p>website</p>
           </div>
+
+          {clickedProject === "fewa fish" && (
+            <div className="item-info">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda illo quo suscipit ab doloribus itaque, tempora facilis earum, magnam velit eum. Impedit eius aliquid sunt nemo adipisci? Maiores, officia recusandae!
+            </div>
+          )}
 
           <div className="project-item">
             <p>spacechat</p>
