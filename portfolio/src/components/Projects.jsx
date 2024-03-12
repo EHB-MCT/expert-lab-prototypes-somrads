@@ -11,6 +11,10 @@ import Magazine from "../file/Flashback-Magazine-Somrad.pdf";
 import ChimaLogo from "../assets/chima/logo.jpg";
 import ChimaMockup from "../assets/chima/mockup.jpg";
 import ChimaScreenshot from "../assets/chima/screenshot.jpg";
+import AmaiLogo from "../assets/amai/logo.png";
+import AmaiMockup from "../assets/amai/mockup.png";
+import AmaiMockup2 from "../assets/amai/mockup2.png";
+
 
 import "../styles/projects.scss";
 
@@ -271,6 +275,15 @@ function Projects() {
               <p>
               Presenting a conceptual logo inspired by the unique charm of Japanese coffee shops. Drawing inspiration from their distinct style characterized by sketchy, mascot-centric designs, I sought to capture the intrigue that defines these establishments.
               </p>
+
+              <div className="designImages">
+                <div id="first-two-images">
+                  <img id="amai-logo" src={AmaiLogo} alt="amai-logo" />
+                  <img id="amai-mockup" src={AmaiMockup} alt="amai-mockup" />
+                <img id="amai-mockup2" src={AmaiMockup2} alt="amai-mockup2" />
+                </div>
+
+              </div>
 
             </div>
           )}

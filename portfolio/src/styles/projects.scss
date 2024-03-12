@@ -211,7 +211,30 @@ $accentColor: #bd3656;
         width: auto;
         height: auto;
       }
+
+      #amai-logo {
+        max-width: 30%;
+        max-height: 30%;
+        width: auto;
+        height: auto;
+        margin-right: 10px; // Add margin for spacing between images
+      }
+  
+      #amai-mockup {
+        max-width: 30%;
+        max-height: 30%;
+        width: auto;
+        height: auto;
+      }
     }
+  
+    #amai-mockup2 {
+      max-width: 30%;
+      max-height: 20%;
+      width: auto;
+      height: auto;
+    }
+    }
+
     
-  }
 }
