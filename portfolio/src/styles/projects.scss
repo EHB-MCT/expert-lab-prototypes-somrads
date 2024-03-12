@@ -231,10 +231,55 @@ $accentColor: #bd3656;
     #amai-mockup2 {
       max-width: 30%;
       max-height: 20%;
+      margin-left: 10px;
       width: auto;
       height: auto;
     }
+
+    #chima-logo {
+      max-width: 30%;
+      max-height: 30%;
+      width: auto;
+      height: auto;
+      margin-right: 10px; // Add margin for spacing between images
     }
 
+    #chima-mockup {
+      max-width: 50%;
+      max-height: 50%;
+      width: auto;
+      height: auto;
+    }
+
+    #poster {
+      max-width: 30%;
+      max-height: 30%;
+      width: auto;
+      height: auto;
+      margin-right: 10px; // Add margin for spacing between images
+    }
+
+    #ls-mockup {
+      max-width: 30%;
+      max-height: 30%;
+      width: auto;
+      height: auto;
+    }
+
+    #neutral {
+      max-width: 30%;
+      max-height: 30%;
+      width: auto;
+      height: auto;
+      margin-left: 10px;
+
+    }
+
+    #first-three-images {
+      display: flex; // Display the first two images in a row
+      margin-bottom: 10px; // Add margin for spacing between rows
+    }
+
+  }
     
 }

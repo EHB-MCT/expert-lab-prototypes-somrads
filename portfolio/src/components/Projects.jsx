@@ -14,6 +14,10 @@ import ChimaScreenshot from "../assets/chima/screenshot.jpg";
 import AmaiLogo from "../assets/amai/logo.png";
 import AmaiMockup from "../assets/amai/mockup.png";
 import AmaiMockup2 from "../assets/amai/mockup2.png";
+import poster from "../assets/love-/poster.jpg"
+import lsMockup from "../assets/love-/lovesparks-mockup.jpg"
+import neutral from "../assets/love-/neutral.jpg"
+
 
 
 import "../styles/projects.scss";
@@ -277,7 +281,7 @@ function Projects() {
               </p>
 
               <div className="designImages">
-                <div id="first-two-images">
+                <div id="first-three-images">
                   <img id="amai-logo" src={AmaiLogo} alt="amai-logo" />
                   <img id="amai-mockup" src={AmaiMockup} alt="amai-mockup" />
                 <img id="amai-mockup2" src={AmaiMockup2} alt="amai-mockup2" />
@@ -301,16 +305,18 @@ function Projects() {
               </div>
 
               <p>
-              A poster I designed, inspired by the fascinating scientific phenomenon known as 'Love Sparks.'
+              A poster I designed, inspired by the fascinating scientific phenomenon known as 'Love Sparks.' This visual  blends a hand-sketched concept with the precision of illustrator and photoshop to articulate and explain the enchanting phenomenon. The poster serves as a captivating exploration, merging artistic expression with scientific intrigue.
               </p>
-              <div className="learn-more">
-                  <a href="#" target="_blank">
-                        <button>
-                          View Project
-                          <img src={Arrow} alt="arrow" />
-                        </button>
-                      </a>
-                    </div>
+
+              <div className="designImages">
+                <div id="first-three-images">
+                  <img id="poster" src={poster} alt="poster" />
+                  <img id="ls-mockup" src={lsMockup} alt="ls-mockup" />
+                <img id="neutral" src={neutral} alt="neutral" />
+                </div>
+
+              </div>
+    
             </div>
           )}
 
