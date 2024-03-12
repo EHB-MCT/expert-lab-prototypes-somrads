@@ -62,15 +62,28 @@ function MobileNavLinks() {
   });
 
   useEffect(() => {
-    timeline_home.from([navContainer], {
-      duration: 1,
-      y: -400,
-      opacity: 1,
-      stagger: {
-        amount: 0.2,
-      },
-    });
-  });
+    if (isOpen) {
+      // Opening animation
+      timeline_home.from([navContainer], {
+        duration: 1,
+        y: -400,
+        opacity: 1,
+        stagger: {
+          amount: 0.2,
+        },
+      });
+    } else {
+      // Closing animation
+      timeline_home.to([navContainer], {
+        duration: 0.5,
+        y: -800,
+        opacity: 0,
+        stagger: {
+          amount: 0.2,
+        },
+      });
+    }
+  }, [isOpen]);
 
   return (
     <Router>

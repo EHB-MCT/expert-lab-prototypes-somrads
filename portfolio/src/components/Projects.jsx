@@ -7,7 +7,11 @@ import LineMobile from "../assets/lines/line-projects.svg";
 import LineDesktop from "../assets/lines/desktop/line-projects.svg";
 import LineMobile3 from "../assets/lines/line-projects-bottom.svg";
 import LineDesktop3 from "../assets/lines/desktop/line-projects-bottom.svg";
-import Magazine from "../file/Flashback-Magazine-Somrad.pdf"
+import Magazine from "../file/Flashback-Magazine-Somrad.pdf";
+import ChimaLogo from "../assets/chima/logo.jpg";
+import ChimaMockup from "../assets/chima/mockup.jpg";
+import ChimaScreenshot from "../assets/chima/screenshot.jpg";
+
 import "../styles/projects.scss";
 
 function Projects() {
@@ -114,7 +118,7 @@ function Projects() {
                           <img src={Arrow} alt="arrow" />
                         </button>
                       </a>
-                    </div>
+                    </div> 
             </div>
           )}
 
@@ -236,16 +240,19 @@ function Projects() {
               </div>
 
               <p>
-              A distinctive logo i made for 'Films by Chima,' a wedding photography service.
+              A distinctive logo i made for 'Films by Chima,' a wedding photography service. The logo elegantly intertwines the initials 'F' and 'C,' encapsulating the essence of the brand. It serves as a timeless and visually appealing representation.
               </p>
-              <div className="learn-more">
-                  <a href="#" target="_blank">
-                        <button>
-                          View Project
-                          <img src={Arrow} alt="arrow" />
-                        </button>
-                      </a>
-                    </div>
+
+              <div className="designImages">
+                <div id="first-two-images">
+                  <img id="chima-logo" src={ChimaLogo} alt="chima-logo" />
+                  <img id="chima-mockup" src={ChimaMockup} alt="chima-mockup" />
+                </div>
+
+                <img id="chima-screenshot" src={ChimaScreenshot} alt="chima-screenshot" />
+              </div>
+
+
             </div>
           )}
 
@@ -262,16 +269,9 @@ function Projects() {
               </div>
 
               <p>
-              A conceptual logo inspired by the unique charm of Japanese coffee shops.
+              Presenting a conceptual logo inspired by the unique charm of Japanese coffee shops. Drawing inspiration from their distinct style characterized by sketchy, mascot-centric designs, I sought to capture the intrigue that defines these establishments.
               </p>
-              <div className="learn-more">
-                  <a href="#" target="_blank">
-                        <button>
-                          View Project
-                          <img src={Arrow} alt="arrow" />
-                        </button>
-                      </a>
-                    </div>
+
             </div>
           )}
 

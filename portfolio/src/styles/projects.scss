@@ -40,6 +40,10 @@ $accentColor: #bd3656;
       }
 
       border-bottom: 0.9px solid black;
+
+      &:hover {
+        border-bottom-color: #cac9c8;
+      }
     }
   }
 
@@ -83,6 +87,15 @@ $accentColor: #bd3656;
     display: none;
   }
 
+  .designImages {
+  margin: 10% 0%;
+    img {
+      max-width: 100%;  // Set maximum width to 100% of the container
+      height: auto;     // Maintain the aspect ratio while resizing
+      margin-bottom: 10px; // Add margin for spacing between images
+    }
+  }
+
   @media (min-width: 768px) {
     margin-top: 8%;
 
@@ -90,7 +103,7 @@ $accentColor: #bd3656;
       font-size: 3.5rem;
     }
 
-    .project-wrapper{
+    .project-wrapper {
       margin-top: 3%;
     }
 
@@ -116,6 +129,10 @@ $accentColor: #bd3656;
         }
 
         border-bottom: 1.5px solid black;
+
+        &:hover {
+          border-bottom-color: #C08A96;
+        }
       }
     }
 
@@ -130,6 +147,7 @@ $accentColor: #bd3656;
         font-size: 1.2rem;
       }
     }
+
     button {
       display: flex;
       margin-top: 1.5%;
@@ -139,9 +157,10 @@ $accentColor: #bd3656;
       font-size: 1rem;
       background-color: #d7d6d4;
     }
+
     .learn-more {
       img {
-        margin-left: 20px; 
+        margin-left: 20px;
       }
     }
 
@@ -161,5 +180,38 @@ $accentColor: #bd3656;
         }
       }
     }
+    .designImages {
+      display: flex;
+      flex-direction: column; // Display images in a column layout
+      margin: 2% 0%;
+    
+      #first-two-images {
+        display: flex; // Display the first two images in a row
+        margin-bottom: 10px; // Add margin for spacing between rows
+    
+        #chima-logo {
+          max-width: 30%;
+          max-height: 30%;
+          width: auto;
+          height: auto;
+          margin-right: 10px; // Add margin for spacing between images
+        }
+    
+        #chima-mockup {
+          max-width: 50%;
+          max-height: 50%;
+          width: auto;
+          height: auto;
+        }
+      }
+    
+      #chima-screenshot {
+        max-width: 50%;
+        max-height: 20%;
+        width: auto;
+        height: auto;
+      }
+    }
+    
   }
 }
