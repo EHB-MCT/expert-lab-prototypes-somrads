@@ -96,6 +96,12 @@ $accentColor: #bd3656;
     }
   }
 
+  #logo {
+    max-width: 100%;
+    width: auto;
+    height: 50%;
+  }
+
   @media (min-width: 768px) {
     margin-top: 8%;
 
@@ -280,6 +286,27 @@ $accentColor: #bd3656;
       margin-bottom: 10px; // Add margin for spacing between rows
     }
 
+    #menu {
+      max-width: 30%;
+      max-height: 30%;
+      width: auto;
+      height: auto;
+      margin-right: 10px; // Add margin for spacing between images
+    }
+
+    #logo {
+      max-width: 30%;
+      width: auto;
+      height: 50%;
+      margin-left: 10px;
+    }
+
+    #card {
+      max-width: 40%;
+      width: auto;
+      height: 50%;
+      margin-left: 10px;
+    }
   }
     
 }

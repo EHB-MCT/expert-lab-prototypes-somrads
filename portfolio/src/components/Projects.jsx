@@ -17,9 +17,9 @@ import AmaiMockup2 from "../assets/amai/mockup2.png";
 import poster from "../assets/love-/poster.jpg"
 import lsMockup from "../assets/love-/lovesparks-mockup.jpg"
 import neutral from "../assets/love-/neutral.jpg"
-
-
-
+import menu from "../assets/manzoku/menu.jpg"
+import logo from "../assets/manzoku/logo.jpg"
+import card from "../assets/manzoku/card.jpg"
 import "../styles/projects.scss";
 
 function Projects() {
@@ -335,17 +335,19 @@ function Projects() {
               </div>
 
               <p>
-              I had the pleasure of designing a comprehensive set of assets for a sushi bar nestled in Bierbeek.
-              </p>
-              <div className="learn-more">
-                  <a href="#" target="_blank">
-                        <button>
-                          View Project
-                          <img src={Arrow} alt="arrow" />
-                        </button>
-                      </a>
-                    </div>
+              I had the pleasure of designing a comprehensive set of assets for a sushi bar nestled in Bierbeek. From crafting an enticing menu to designing a memorable business card, I've also created various visual elements including logos, signs and more.              </p>
+              <div className="designImages">
+                <div id="first-three-images">
+                  <img id="menu" src={menu} alt="poster" />
+                <img id="card" src={card} alt="neutral" />
+                  <img id="logo" src={logo} alt="ls-mockup" />
+                </div>
+
+              </div>
+            
+            
             </div>
+
           )}
           
           </div>
