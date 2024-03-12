@@ -157,7 +157,7 @@ function Projects() {
             </div>
           )}
 
-          <div className="project-item" onClick={() => handleClick("flashback")}>
+          {/* <div className="project-item" onClick={() => handleClick("flashback")}>
             <p>flashback</p>
             <p id="project-tag">react native</p>
             <p>app</p>
@@ -181,7 +181,7 @@ function Projects() {
                       </a>
                     </div>
             </div>
-          )}
+          )} */}
 
           <div className="project-item" onClick={() => handleClick("anonymously connect")}>
             <p>anonymously connect</p>
