@@ -235,6 +235,41 @@ function Projects() {
             </div>
           )}
 
+<div className="project-item"  onClick={() => handleClick("twitch")}>
+            <p>twitch redesign</p>
+            <p id="project-tag">angular, adobe xd</p>
+            <p>website</p>
+          </div>
+
+          {clickedProject === "twitch" && (
+            <div className="item-info" ref={infoRef}  onClick={() => handleClick("twitch")}>
+              <div className="close-arrow">
+                <img src={CloseArrow} alt="close-arrow" />
+              </div>
+
+              <p>
+              For my front-end specialization course, I took on the challenge of redesigning the streaming platform Twitch. Through extensive research into its UI/UX, I identified shortcomings within the platform and devised a redesign that not only addresses these issues but also incorporates my own unique twist, resulting in a more aesthetically pleasing and user-friendly experience.
+              In addition to designing the concept, I also coded it using Angular as part of my coursework
+              </p>
+              <div className="learn-more">
+                      <a href="https://xd.adobe.com/view/2b61e582-995d-4e19-9020-d6a9d1c1bdb1-7e32/?fullscreen" target="_blank">
+                        <button>
+                          View Design
+                          <img src={Arrow} alt="arrow" />
+                        </button>
+                      </a>
+
+                      <a href="https://somrad-twitchapp.web.app" target="_blank">
+                        <button>
+                          View Website
+                          <img src={Arrow} alt="arrow" />
+                        </button>
+                      </a>
+
+                    </div>
+            </div>
+          )}
+
             <div className="project-item" onClick={() => handleClick("films by chima")}>
             <p>films by chima</p>
             <p id="project-tag">illustrator, photoshop, figma</p>
