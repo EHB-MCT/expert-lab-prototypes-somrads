@@ -1,0 +1,7 @@
+# railway.yml
+plugins:
+  - name: 'nodejs'
+    version: '14'
+
+# Specify the path to your server file
+buildCommand: 'npm install && node live-chat-app/server/index.js'
