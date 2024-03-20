@@ -1,5 +1,0 @@
-plugins:
-  - name: 'nodejs'
-    version: 'latest'
-
-buildCommand: 'npm install && node live-chat-app/server/index.js'
