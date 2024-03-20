@@ -131,11 +131,11 @@ function Projects() {
           )}
 
 
-          <div className="project-item"  onClick={() => handleClick("spacechat")}>
+          {/* <div className="project-item"  onClick={() => handleClick("spacechat")}>
             <p>spacechat</p>
             <p id="project-tag">react.js, node.js, websockets</p>
             <p>website</p>
-          </div>
+          </div> */}
 
           {clickedProject === "spacechat" && (
             <div className="item-info" ref={infoRef}  onClick={() => handleClick("spacechat")}>
