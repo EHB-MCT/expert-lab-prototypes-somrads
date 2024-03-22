@@ -145,7 +145,7 @@ function Projects() {
 
               <p>
 
-              Experience my live chat app, specially designed for space enthusiasts who value anonymity. Engage in cosmic conversations with fellow space lovers, fostering a sense of animosity-free connection. However, due to payment constraints for a web socket server, it will only work locally for now. Feel free to check the GitHub repository for the code and explore its features.              </p>
+              Experience my live chat app, specially designed for space enthusiasts who value anonymity.stering a sense of animosity-free connection.</p>
               <div className="learn-more">
                       <a href="https://spacechat.vercel.app/" target="_blank">
                         <button>

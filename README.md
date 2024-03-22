@@ -48,7 +48,7 @@ This project is a simple yet interactive live chat application that allows users
 
 ### Note:
 
-Due to the limitations of WebSocket servers being costly to maintain, this application is designed to work only locally with a local server. It is intended for educational purposes and demonstration of real-time communication concepts using WebSockets.
+These projects are intended for educational purposes and demonstration.
 
 
 ### Portfolio Project:
