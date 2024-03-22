@@ -14,8 +14,8 @@ function Chat() {
   const [users, setUsers] = useState("");
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("");
-
-  const ENDPOINT = "https://space-chat.up.railway.app";
+ 
+  const ENDPOINT = "https://space-chat.up.app";
   useEffect(() => {
     const { name, room } = queryString.parse(window.location.search);
     setName(name);
