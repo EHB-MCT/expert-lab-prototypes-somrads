@@ -131,11 +131,11 @@ function Projects() {
           )}
 
 
-          {/* <div className="project-item"  onClick={() => handleClick("spacechat")}>
+           <div className="project-item"  onClick={() => handleClick("spacechat")}>
             <p>spacechat</p>
             <p id="project-tag">react.js, node.js, websockets</p>
             <p>website</p>
-          </div> */}
+          </div> 
 
           {clickedProject === "spacechat" && (
             <div className="item-info" ref={infoRef}  onClick={() => handleClick("spacechat")}>
@@ -144,8 +144,8 @@ function Projects() {
               </div>
 
               <p>
-              Experience my live chat app, specially designed for space enthusiasts who value anonymity. Engage in cosmic conversations with fellow space lovers, fostering a sense of animosity-free connection.
-              </p>
+
+              Experience my live chat app, specially designed for space enthusiasts who value anonymity. Engage in cosmic conversations with fellow space lovers, fostering a sense of animosity-free connection. However, due to payment constraints for a web socket server, it will only work locally for now. Feel free to check the GitHub repository for the code and explore its features.              </p>
               <div className="learn-more">
                       <a href="https://spacechat.vercel.app/" target="_blank">
                         <button>
@@ -153,11 +153,18 @@ function Projects() {
                           <img src={Arrow} alt="arrow" />
                         </button>
                       </a>
+
+                      <a href="https://github.com/EHB-MCT/expert-lab-prototypes-somrads/tree/main/live-chat-app" target="_blank">
+                        <button>
+                          View Github
+                          <img src={Arrow} alt="arrow" />
+                        </button>
+                      </a>
                     </div>
             </div>
           )}
 
-          {/* <div className="project-item" onClick={() => handleClick("flashback")}>
+          <div className="project-item" onClick={() => handleClick("flashback")}>
             <p>flashback</p>
             <p id="project-tag">react native</p>
             <p>app</p>
@@ -170,10 +177,9 @@ function Projects() {
               </div>
 
               <p>
-              I've developed an iOS application as a culmination of my thesis research—a social media platform tailored for families to enhance their connections authentically. Due to its iOS nature, deployment isn't feasible, but I'm excited to showcase the app's functionality through a compelling screen recording.
-              </p>
+              I've developed an iOS application as a culmination of my thesis research—a social media platform tailored for families to enhance their connections authentically. However, due to deprecated packages, deployment isn't feasible at the moment. Nonetheless, I'm actively working on fixing this issue. In the meantime, you can check out the code on GitHub to explore the app's functionality.               </p>
               <div className="learn-more">
-                      <a href="#" target="_blank">
+                      <a href="https://github.com/somrads/flashback" target="_blank">
                         <button>
                           View Project
                           <img src={Arrow} alt="arrow" />
@@ -181,7 +187,7 @@ function Projects() {
                       </a>
                     </div>
             </div>
-          )} */}
+          )}
 
           <div className="project-item" onClick={() => handleClick("anonymously connect")}>
             <p>anonymously connect</p>
